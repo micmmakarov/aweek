@@ -1,0 +1,36 @@
+<!-- FEED HERE! -->
+			<div class="content">
+
+<% @posts.each do |post| %>
+	
+                <!-- Post Start-->
+                <a class=nothing href='<%= url_for(post) %>'>
+                <div class="post clearfix">
+                    <img src="images/post-icon.jpg" class="alignleft" alt="" />
+                    <div class="desc">
+                        <p class="postmetadata"><strong><%= post.organisation.name %></strong> · Oct 20, 2011 · <small>10:33pm</small></p>
+                        <div class="category">Category</div>
+                        <div class="postcontent">
+                            <p><%= post.title %></p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+                
+     
+
+<% end %>
+             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+

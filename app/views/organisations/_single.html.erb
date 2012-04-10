@@ -1,0 +1,42 @@
+<div class=slideshow>
+
+<div class="main wrap">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @organisation.user_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @organisation.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @organisation.address %>
+</p>
+
+<p>
+  <b>Contacts:</b>
+  <%= @organisation.contacts %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @organisation.description %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @organisation.city %>
+</p>
+
+
+<%= link_to 'Edit', edit_organisation_path(@organisation) %> |
+<%= link_to 'Back', organisations_path %>
+
+</div>
+
+</div>

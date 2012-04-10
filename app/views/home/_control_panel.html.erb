@@ -1,0 +1,37 @@
+<% if user_signed_in? then %>
+
+<div class=control-panel>
+	<div class=wrap>
+                <ul>
+                    <li><a href="#">Users</a></li>
+                    <li><a href="#">Share</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#" class=post-call>Post</a></li>
+                    <li><a href="#">Manage</a></li>
+					<li id=helper></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#"><%= current_user.name %></a></li>
+                    <li><a href="#">Profile</a></li>
+					<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+                </ul>
+
+	</div>
+</div>
+
+<% else %>
+
+<div class=control-panel>
+	<div class=wrap>
+
+
+                <ul>
+                    <li><a href="#login" class=login-button>Login</a></li>
+                    <li><%= link_to('Register', new_user_registration_path)  %></li>
+                </ul>
+
+	</div>
+</div>
+
+<% end %>

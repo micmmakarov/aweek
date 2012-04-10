@@ -1,0 +1,33 @@
+<div class=dropdown-panel>
+
+
+<%= form_for(@new_post) do |f| %>
+
+
+
+
+<div class=title>Article title</div><%= f.text_field :title, :class => 'input' %><div class=clear></div>
+<div class=title>byline</div><<%= f.number_field :organisation_id, :class => 'input' %><div class=clear></div>
+
+<div class=title>article</div><%= f.text_area :content %>
+	<div class=images>
+		<div>Image 1</div><input type=button value="Coose file"><div class=status>No file choosen</div><div class=clear></div>
+		<div>Image 2</div><input type=button value="Coose file"><div class=status>No file chosen</div><div class=clear></div>
+		<div>Image 3</div><input type=button value="Coose file"><div class=status>No file chosen</div><div class=clear></div>
+		<div>Image 4</div><input type=button value="Coose file"><div class=status>No file chosen</div><div class=clear></div>
+		<a class=preview>Preview</a><%= f.submit :class => 'post' %><div class=clear></div>
+	</div>
+
+
+<div class=clear></div> 
+
+
+
+
+
+<div class=title>tags</div><input type=text class=tags placeholder="Title here, bro!"><div class=save><a href="#">Save</a><a href="#">Delete</a><a class=close href="#">Close Window</a></div><div class=clear></div>
+
+
+  <% end %>
+  
+  </div>

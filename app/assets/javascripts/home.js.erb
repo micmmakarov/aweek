@@ -1,0 +1,47 @@
+
+var post_shown=0;
+var login_shown=0;
+
+$(document).ready( function () {
+
+
+$(".login-button").click( function (e) {
+e.preventDefault();
+
+var dp=$(".login-window");
+
+	if (login_shown==0) {
+		dp.stop().animate({top: '39px'});
+		login_shown=1;
+//		$.get("/users/sign_in", function(data) {
+//			dp.html(data);
+//		});
+	} else {
+	dp.stop().animate({top: '-550px'});
+	login_shown=0;
+	}
+
+});
+
+
+$(".post-call").click( function (e) {
+e.preventDefault();
+
+var dp=$(".dropdown-panel");
+
+	if (post_shown==0) {
+		dp.stop().animate({top: '39px'});
+		post_shown=1;
+//		$.get("/users/sign_in", function(data) {
+//			dp.html(data);
+//		});
+	} else {
+	dp.stop().animate({top: '-550px'});
+	post_shown=0;
+	}
+
+});
+
+
+
+});

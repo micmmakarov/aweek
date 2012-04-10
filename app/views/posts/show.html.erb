@@ -1,0 +1,44 @@
+<div class="main wrap">
+	
+	<div class=left-menu>
+	<div class=title>ORGANIZATION</div>
+		<div class=content>
+			<%= @post.organisation.name %>
+			<br><br>
+			Join Organization			
+		</div>
+	<div class=title>COMMENTS</div>
+	<div class=title>THIRD LINK</div>
+	<div class=title>LINK OF FORTH</div>
+
+	</div>
+	
+	<div class=body>
+	<div class=post>
+	<p id="notice"><%= notice %></p>
+	
+	<div class=post-title> <%= @post.title %></div>
+	<div class=post-description>
+	<% if @post.user_id!=0 then
+	puts @post.user.name 
+	end %> - <%= @post.created_at.strftime("%B %d, %Y") %></div>
+	<div class=post-content><%= @post.content %></div>
+	</div>
+	
+
+	
+	  <b>Organisation:</b>
+	  <%= @post.organisation_id %>
+	</p>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+
+</div>
+
+	<%= render 'share' %>
+
+
+
+</div>

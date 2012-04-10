@@ -1,0 +1,26 @@
+<div class=events>
+	<div class=title>UPCOMING EVENTS</div>
+		<div class=content>
+			
+			<% @events.each do |event| %>
+			
+				<div class=event>
+					
+					<div class=date>
+						<%= event.date.strftime("%B %d") %>
+					</div>
+					<div class=event-title>
+						<%= event.title %>
+					</div>
+					<div class=event-address>
+						<%= event.address %>
+					</div>
+					<div class=time>
+						<%= event.date.strftime("%I:%M %p") %>
+					</div>
+				</div>
+			
+			<% end %>
+		</div>
+
+	</div>
