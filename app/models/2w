@@ -1,0 +1,673 @@
+<NotepadPlus>
+    <Project name="AW">
+        <Folder name=".bundle">
+            <File name="C:\Users\John\Rails\AW\.bundle\config" />
+        </Folder>
+        <Folder name="123">
+            <File name="C:\Users\John\Rails\AW\123\config" />
+        </Folder>
+        <Folder name="app">
+            <Folder name="assets">
+                <Folder name="boot">
+                    <Folder name="css">
+                        <File name="C:\Users\John\Rails\AW\app\assets\boot\css\bootstrap.css" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\boot\css\bootstrap.min.css" />
+                    </Folder>
+                    <Folder name="img">
+                        <File name="C:\Users\John\Rails\AW\app\assets\boot\img\glyphicons-halflings-white.png" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\boot\img\glyphicons-halflings.png" />
+                    </Folder>
+                    <Folder name="js">
+                        <File name="C:\Users\John\Rails\AW\app\assets\boot\js\bootstrap.js" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\boot\js\bootstrap.min.js" />
+                    </Folder>
+                </Folder>
+                <Folder name="images">
+                    <Folder name="thumbs">
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\events-thumb1.jpg" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\pic1.png" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\pic2.png" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\pic3.png" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\pic4.png" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\pic5.png" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\post-big1.jpg" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\post-thumb1.jpg" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\post-thumb2.jpg" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\post-thumb3.jpg" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\sidebar-thumb1.jpg" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\sidebar-thumb2.jpg" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\sidebar-thumb3.jpg" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\sidebar-thumb4.jpg" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\sidebar-thumb5.jpg" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\slider-big.jpg" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\slider-thumb1.jpg" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\slider-thumb2.jpg" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\slider-thumb3.jpg" />
+                        <File name="C:\Users\John\Rails\AW\app\assets\images\thumbs\Thumbs.db" />
+                    </Folder>
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\background.png" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\bg - Copy.png" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\bg.png" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\bg2.png" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\control-panel.gif" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\desktop.ini" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\glyphicons-halflings-white.png" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\glyphicons-halflings.png" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\logo.png" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\menu-panel.png" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\post-icon.jpg" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\rails.png" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\separator.png" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\shadow1.gif" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\shadow1.png" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\shadow2.png" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\shadow2flip.png" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\images\white-disappear.png" />
+                </Folder>
+                <Folder name="javascripts">
+                    <File name="C:\Users\John\Rails\AW\app\assets\javascripts\application.js" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\javascripts\attachments.js.coffee" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\javascripts\bootstrap.min.js" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\javascripts\events.js.coffee" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\javascripts\home.js.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\javascripts\modal.js" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\javascripts\organisations.js.coffee" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\javascripts\posts.js.coffee" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\javascripts\users.js.coffee" />
+                </Folder>
+                <Folder name="stylesheets">
+                    <File name="C:\Users\John\Rails\AW\app\assets\stylesheets\application.css" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\stylesheets\attachments.css.scss" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\stylesheets\bootstrap.min.css" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\stylesheets\events.css.scss" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\stylesheets\home.css.scss" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\stylesheets\main.css" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\stylesheets\organisations.css.scss" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\stylesheets\posts.css.scss" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\stylesheets\reset.css" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\stylesheets\scaffolds.css.scss" />
+                    <File name="C:\Users\John\Rails\AW\app\assets\stylesheets\users.css.scss" />
+                </Folder>
+            </Folder>
+            <Folder name="controllers">
+                <File name="C:\Users\John\Rails\AW\app\controllers\application_controller.rb" />
+                <File name="C:\Users\John\Rails\AW\app\controllers\attachments_controller.rb" />
+                <File name="C:\Users\John\Rails\AW\app\controllers\events_controller.rb" />
+                <File name="C:\Users\John\Rails\AW\app\controllers\home_controller.rb" />
+                <File name="C:\Users\John\Rails\AW\app\controllers\organisations_controller.rb" />
+                <File name="C:\Users\John\Rails\AW\app\controllers\posts_controller.rb" />
+                <File name="C:\Users\John\Rails\AW\app\controllers\users_controller.rb" />
+            </Folder>
+            <Folder name="helpers">
+                <File name="C:\Users\John\Rails\AW\app\helpers\application_helper.rb" />
+                <File name="C:\Users\John\Rails\AW\app\helpers\attachments_helper.rb" />
+                <File name="C:\Users\John\Rails\AW\app\helpers\events_helper.rb" />
+                <File name="C:\Users\John\Rails\AW\app\helpers\home_helper.rb" />
+                <File name="C:\Users\John\Rails\AW\app\helpers\organisations_helper.rb" />
+                <File name="C:\Users\John\Rails\AW\app\helpers\posts_helper.rb" />
+                <File name="C:\Users\John\Rails\AW\app\helpers\users_helper.rb" />
+            </Folder>
+            <Folder name="mailers">
+                <File name="C:\Users\John\Rails\AW\app\mailers\.gitkeep" />
+            </Folder>
+            <Folder name="models">
+                <File name=".gitkeep" />
+                <File name="attachment.rb" />
+                <File name="event.rb" />
+                <File name="organisation.rb" />
+                <File name="post.rb" />
+                <File name="user.rb" />
+            </Folder>
+            <Folder name="views">
+                <Folder name="attachments">
+                    <File name="C:\Users\John\Rails\AW\app\views\attachments\edit.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\attachments\index.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\attachments\new.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\attachments\show.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\attachments\_form.html.erb" />
+                </Folder>
+                <Folder name="devise">
+                    <Folder name="confirmations">
+                        <File name="C:\Users\John\Rails\AW\app\views\devise\confirmations\new.html.erb" />
+                    </Folder>
+                    <Folder name="mailer">
+                        <File name="C:\Users\John\Rails\AW\app\views\devise\mailer\confirmation_instructions.html.erb" />
+                        <File name="C:\Users\John\Rails\AW\app\views\devise\mailer\reset_password_instructions.html.erb" />
+                        <File name="C:\Users\John\Rails\AW\app\views\devise\mailer\unlock_instructions.html.erb" />
+                    </Folder>
+                    <Folder name="passwords">
+                        <File name="C:\Users\John\Rails\AW\app\views\devise\passwords\edit.html.erb" />
+                        <File name="C:\Users\John\Rails\AW\app\views\devise\passwords\new.html.erb" />
+                    </Folder>
+                    <Folder name="registrations">
+                        <File name="C:\Users\John\Rails\AW\app\views\devise\registrations\edit.html.erb" />
+                        <File name="C:\Users\John\Rails\AW\app\views\devise\registrations\new.html.erb" />
+                    </Folder>
+                    <Folder name="sessions">
+                        <File name="C:\Users\John\Rails\AW\app\views\devise\sessions\new.html.erb" />
+                    </Folder>
+                    <Folder name="unlocks">
+                        <File name="C:\Users\John\Rails\AW\app\views\devise\unlocks\new.html.erb" />
+                    </Folder>
+                    <File name="C:\Users\John\Rails\AW\app\views\devise\_links.erb" />
+                </Folder>
+                <Folder name="events">
+                    <File name="C:\Users\John\Rails\AW\app\views\events\edit.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\events\index.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\events\new.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\events\show.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\events\_form.html.erb" />
+                </Folder>
+                <Folder name="home">
+                    <File name="C:\Users\John\Rails\AW\app\views\home\index.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\home\_control_panel.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\home\_events.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\home\_links.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\home\_link_words.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\home\_logo.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\home\_menu.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\home\_posts.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\home\_slideshow.html.erb" />
+                </Folder>
+                <Folder name="layouts">
+                    <File name="C:\Users\John\Rails\AW\app\views\layouts\application.html.erb" />
+                </Folder>
+                <Folder name="organisations">
+                    <File name="C:\Users\John\Rails\AW\app\views\organisations\edit.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\organisations\index.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\organisations\new.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\organisations\show.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\organisations\_form.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\organisations\_single.html.erb" />
+                </Folder>
+                <Folder name="posts">
+                    <File name="C:\Users\John\Rails\AW\app\views\posts\ajax_form.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\posts\edit.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\posts\empty_post.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\posts\index.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\posts\new.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\posts\show.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\posts\_form.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\posts\_new.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\posts\_share.html.erb" />
+                </Folder>
+                <Folder name="users">
+                    <Folder name="confirmations">
+                        <File name="C:\Users\John\Rails\AW\app\views\users\confirmations\new.html.erb" />
+                    </Folder>
+                    <Folder name="mailer">
+                        <File name="C:\Users\John\Rails\AW\app\views\users\mailer\confirmation_instructions.html.erb" />
+                        <File name="C:\Users\John\Rails\AW\app\views\users\mailer\reset_password_instructions.html.erb" />
+                        <File name="C:\Users\John\Rails\AW\app\views\users\mailer\unlock_instructions.html.erb" />
+                    </Folder>
+                    <Folder name="passwords">
+                        <File name="C:\Users\John\Rails\AW\app\views\users\passwords\edit.html.erb" />
+                        <File name="C:\Users\John\Rails\AW\app\views\users\passwords\new.html.erb" />
+                    </Folder>
+                    <Folder name="registrations">
+                        <File name="C:\Users\John\Rails\AW\app\views\users\registrations\edit.html.erb" />
+                        <File name="C:\Users\John\Rails\AW\app\views\users\registrations\new.html.erb" />
+                    </Folder>
+                    <Folder name="sessions">
+                        <File name="C:\Users\John\Rails\AW\app\views\users\sessions\new.html.erb" />
+                    </Folder>
+                    <Folder name="unlocks">
+                        <File name="C:\Users\John\Rails\AW\app\views\users\unlocks\new.html.erb" />
+                    </Folder>
+                    <File name="C:\Users\John\Rails\AW\app\views\users\edit.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\users\index.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\users\new.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\users\show.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\users\_form.html.erb" />
+                    <File name="C:\Users\John\Rails\AW\app\views\users\_links.erb" />
+                </Folder>
+            </Folder>
+        </Folder>
+        <Folder name="asianweek" />
+        <Folder name="AWEEK">
+            <Folder name="css">
+                <File name="C:\Users\John\Rails\AW\AWEEK\css\jquery.simplyscroll-1.0.4.css" />
+            </Folder>
+            <Folder name="images">
+                <Folder name="thumbs">
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\events-thumb1.jpg" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\pic1.png" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\pic2.png" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\pic3.png" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\pic4.png" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\pic5.png" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\post-big1.jpg" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\post-thumb1.jpg" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\post-thumb2.jpg" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\post-thumb3.jpg" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\sidebar-thumb1.jpg" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\sidebar-thumb2.jpg" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\sidebar-thumb3.jpg" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\sidebar-thumb4.jpg" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\sidebar-thumb5.jpg" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\slider-big.jpg" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\slider-thumb1.jpg" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\slider-thumb2.jpg" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\slider-thumb3.jpg" />
+                    <File name="C:\Users\John\Rails\AW\AWEEK\images\thumbs\Thumbs.db" />
+                </Folder>
+                <File name="C:\Users\John\Rails\AW\AWEEK\images\bg.png" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\images\control-panel.gif" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\images\desktop.ini" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\images\logo.png" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\images\menu-panel.png" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\images\post-icon.jpg" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\images\separator.png" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\images\shadow1.gif" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\images\shadow1.png" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\images\shadow2.png" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\images\shadow2flip.png" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\images\white-disappear.png" />
+            </Folder>
+            <Folder name="js">
+                <File name="C:\Users\John\Rails\AW\AWEEK\js\.DS_Store" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\js\hoverIntent.js" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\js\init.js" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\js\jquery-1.7.1.min.js" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\js\jquery.custom_radio_checkbox.js" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\js\jquery.cycle.all.js" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\js\jquery.mediaqueries.js" />
+                <File name="C:\Users\John\Rails\AW\AWEEK\js\jquery.simplyscroll-1.0.4.js" />
+            </Folder>
+            <File name="C:\Users\John\Rails\AW\AWEEK\1 - index.psd" />
+            <File name="C:\Users\John\Rails\AW\AWEEK\index.html" />
+            <File name="C:\Users\John\Rails\AW\AWEEK\main.css" />
+            <File name="C:\Users\John\Rails\AW\AWEEK\reset.css" />
+            <File name="C:\Users\John\Rails\AW\AWEEK\tests.html" />
+        </Folder>
+        <Folder name="config">
+            <Folder name="environments">
+                <File name="C:\Users\John\Rails\AW\config\environments\development.rb" />
+                <File name="C:\Users\John\Rails\AW\config\environments\production.rb" />
+                <File name="C:\Users\John\Rails\AW\config\environments\test.rb" />
+            </Folder>
+            <Folder name="initializers">
+                <File name="C:\Users\John\Rails\AW\config\initializers\backtrace_silencers.rb" />
+                <File name="C:\Users\John\Rails\AW\config\initializers\devise.rb" />
+                <File name="C:\Users\John\Rails\AW\config\initializers\inflections.rb" />
+                <File name="C:\Users\John\Rails\AW\config\initializers\mime_types.rb" />
+                <File name="C:\Users\John\Rails\AW\config\initializers\secret_token.rb" />
+                <File name="C:\Users\John\Rails\AW\config\initializers\session_store.rb" />
+                <File name="C:\Users\John\Rails\AW\config\initializers\wrap_parameters.rb" />
+            </Folder>
+            <Folder name="locales">
+                <File name="C:\Users\John\Rails\AW\config\locales\devise.en.yml" />
+                <File name="C:\Users\John\Rails\AW\config\locales\en.yml" />
+            </Folder>
+            <File name="C:\Users\John\Rails\AW\config\application.rb" />
+            <File name="C:\Users\John\Rails\AW\config\boot.rb" />
+            <File name="C:\Users\John\Rails\AW\config\database.yml" />
+            <File name="C:\Users\John\Rails\AW\config\environment.rb" />
+            <File name="C:\Users\John\Rails\AW\config\routes.rb" />
+        </Folder>
+        <Folder name="db">
+            <Folder name="migrate">
+                <File name="C:\Users\John\Rails\AW\db\migrate\20120410172231_create_users.rb" />
+                <File name="C:\Users\John\Rails\AW\db\migrate\20120410172232_add_devise_to_users.rb" />
+                <File name="C:\Users\John\Rails\AW\db\migrate\20120410172233_create_posts.rb" />
+                <File name="C:\Users\John\Rails\AW\db\migrate\20120410172234_create_events.rb" />
+                <File name="C:\Users\John\Rails\AW\db\migrate\20120410172235_create_organisations.rb" />
+                <File name="C:\Users\John\Rails\AW\db\migrate\20120410172236_add_city_to_events.rb" />
+                <File name="C:\Users\John\Rails\AW\db\migrate\20120410172237_create_attachments.rb" />
+                <File name="C:\Users\John\Rails\AW\db\migrate\20120410172238_add_pic_to_attachments.rb" />
+            </Folder>
+            <File name="C:\Users\John\Rails\AW\db\development.sqlite3" />
+            <File name="C:\Users\John\Rails\AW\db\schema.rb" />
+            <File name="C:\Users\John\Rails\AW\db\seeds.rb" />
+        </Folder>
+        <Folder name="doc">
+            <File name="C:\Users\John\Rails\AW\doc\README_FOR_APP" />
+        </Folder>
+        <Folder name="lib">
+            <Folder name="assets">
+                <File name="C:\Users\John\Rails\AW\lib\assets\.gitkeep" />
+            </Folder>
+            <Folder name="tasks">
+                <File name="C:\Users\John\Rails\AW\lib\tasks\.gitkeep" />
+            </Folder>
+        </Folder>
+        <Folder name="log">
+            <File name="C:\Users\John\Rails\AW\log\.gitkeep" />
+            <File name="C:\Users\John\Rails\AW\log\development.log" />
+        </Folder>
+        <Folder name="public">
+            <Folder name="system">
+                <Folder name="attachments">
+                    <Folder name="pics">
+                        <Folder name="000">
+                            <Folder name="000">
+                                <Folder name="001">
+                                    <Folder name="medium">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\001\medium\sf.jpg" />
+                                    </Folder>
+                                    <Folder name="original">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\001\original\sf.jpg" />
+                                    </Folder>
+                                    <Folder name="thumb">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\001\thumb\sf.jpg" />
+                                    </Folder>
+                                </Folder>
+                                <Folder name="002">
+                                    <Folder name="medium">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\002\medium\sf.jpg" />
+                                    </Folder>
+                                    <Folder name="original">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\002\original\sf.jpg" />
+                                    </Folder>
+                                    <Folder name="thumb">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\002\thumb\sf.jpg" />
+                                    </Folder>
+                                </Folder>
+                                <Folder name="003">
+                                    <Folder name="medium">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\003\medium\2.jpg" />
+                                    </Folder>
+                                    <Folder name="original">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\003\original\2.jpg" />
+                                    </Folder>
+                                    <Folder name="thumb">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\003\thumb\2.jpg" />
+                                    </Folder>
+                                </Folder>
+                                <Folder name="004">
+                                    <Folder name="medium">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\004\medium\DSC_0140.jpg" />
+                                    </Folder>
+                                    <Folder name="original">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\004\original\DSC_0140.jpg" />
+                                    </Folder>
+                                    <Folder name="thumb">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\004\thumb\DSC_0140.jpg" />
+                                    </Folder>
+                                </Folder>
+                                <Folder name="005">
+                                    <Folder name="medium">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\005\medium\DSC_0137.jpg" />
+                                    </Folder>
+                                    <Folder name="original">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\005\original\DSC_0137.jpg" />
+                                    </Folder>
+                                    <Folder name="thumb">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\005\thumb\DSC_0137.jpg" />
+                                    </Folder>
+                                </Folder>
+                                <Folder name="006">
+                                    <Folder name="medium">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\006\medium\arrays.jpg" />
+                                    </Folder>
+                                    <Folder name="original">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\006\original\arrays.jpg" />
+                                    </Folder>
+                                    <Folder name="thumb">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\006\thumb\arrays.jpg" />
+                                    </Folder>
+                                </Folder>
+                                <Folder name="007">
+                                    <Folder name="medium">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\007\medium\sf.jpg" />
+                                    </Folder>
+                                    <Folder name="original">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\007\original\sf.jpg" />
+                                    </Folder>
+                                    <Folder name="thumb">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\007\thumb\sf.jpg" />
+                                    </Folder>
+                                </Folder>
+                                <Folder name="008">
+                                    <Folder name="medium">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\008\medium\lampochka.jpg" />
+                                    </Folder>
+                                    <Folder name="original">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\008\original\lampochka.jpg" />
+                                    </Folder>
+                                    <Folder name="thumb">
+                                        <File name="C:\Users\John\Rails\AW\public\system\attachments\pics\000\000\008\thumb\lampochka.jpg" />
+                                    </Folder>
+                                </Folder>
+                            </Folder>
+                        </Folder>
+                    </Folder>
+                </Folder>
+            </Folder>
+            <File name="C:\Users\John\Rails\AW\public\404.html" />
+            <File name="C:\Users\John\Rails\AW\public\422.html" />
+            <File name="C:\Users\John\Rails\AW\public\500.html" />
+            <File name="C:\Users\John\Rails\AW\public\favicon.ico" />
+            <File name="C:\Users\John\Rails\AW\public\robots.txt" />
+        </Folder>
+        <Folder name="script">
+            <File name="C:\Users\John\Rails\AW\script\rails" />
+        </Folder>
+        <Folder name="test">
+            <Folder name="fixtures">
+                <File name="C:\Users\John\Rails\AW\test\fixtures\.gitkeep" />
+                <File name="C:\Users\John\Rails\AW\test\fixtures\attachments.yml" />
+                <File name="C:\Users\John\Rails\AW\test\fixtures\events.yml" />
+                <File name="C:\Users\John\Rails\AW\test\fixtures\organisations.yml" />
+                <File name="C:\Users\John\Rails\AW\test\fixtures\posts.yml" />
+                <File name="C:\Users\John\Rails\AW\test\fixtures\users.yml" />
+            </Folder>
+            <Folder name="functional">
+                <File name="C:\Users\John\Rails\AW\test\functional\.gitkeep" />
+                <File name="C:\Users\John\Rails\AW\test\functional\attachments_controller_test.rb" />
+                <File name="C:\Users\John\Rails\AW\test\functional\events_controller_test.rb" />
+                <File name="C:\Users\John\Rails\AW\test\functional\home_controller_test.rb" />
+                <File name="C:\Users\John\Rails\AW\test\functional\organisations_controller_test.rb" />
+                <File name="C:\Users\John\Rails\AW\test\functional\posts_controller_test.rb" />
+                <File name="C:\Users\John\Rails\AW\test\functional\users_controller_test.rb" />
+            </Folder>
+            <Folder name="integration">
+                <File name="C:\Users\John\Rails\AW\test\integration\.gitkeep" />
+            </Folder>
+            <Folder name="performance">
+                <File name="C:\Users\John\Rails\AW\test\performance\browsing_test.rb" />
+            </Folder>
+            <Folder name="unit">
+                <Folder name="helpers">
+                    <File name="C:\Users\John\Rails\AW\test\unit\helpers\attachments_helper_test.rb" />
+                    <File name="C:\Users\John\Rails\AW\test\unit\helpers\events_helper_test.rb" />
+                    <File name="C:\Users\John\Rails\AW\test\unit\helpers\home_helper_test.rb" />
+                    <File name="C:\Users\John\Rails\AW\test\unit\helpers\organisations_helper_test.rb" />
+                    <File name="C:\Users\John\Rails\AW\test\unit\helpers\posts_helper_test.rb" />
+                    <File name="C:\Users\John\Rails\AW\test\unit\helpers\users_helper_test.rb" />
+                </Folder>
+                <File name="C:\Users\John\Rails\AW\test\unit\.gitkeep" />
+                <File name="C:\Users\John\Rails\AW\test\unit\attachment_test.rb" />
+                <File name="C:\Users\John\Rails\AW\test\unit\event_test.rb" />
+                <File name="C:\Users\John\Rails\AW\test\unit\organisation_test.rb" />
+                <File name="C:\Users\John\Rails\AW\test\unit\post_test.rb" />
+                <File name="C:\Users\John\Rails\AW\test\unit\user_test.rb" />
+            </Folder>
+            <File name="C:\Users\John\Rails\AW\test\test_helper.rb" />
+        </Folder>
+        <Folder name="tmp">
+            <Folder name="cache">
+                <Folder name="assets">
+                    <Folder name="C2B">
+                        <Folder name="8C0">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\C2B\8C0\sprockets%2F88224f26c865999a021178a7e049b026" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="C7B">
+                        <Folder name="360">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\C7B\360\sprockets%2F551005ac7235c4f2d9240c854a87914f" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="C9F">
+                        <Folder name="560">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\C9F\560\sprockets%2F8e5a9738e9bc15478e026d98335454f9" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="CA8">
+                        <Folder name="9B0">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\CA8\9B0\sprockets%2F207907100aabd08a6767e39a95b364e3" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="CAD">
+                        <Folder name="D10">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\CAD\D10\sprockets%2F6474952016248a7b6f8b505e37daad40" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="CBB">
+                        <Folder name="830">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\CBB\830\sprockets%2F64c2b69414635243aeec2ef9c7773835" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="CBF">
+                        <Folder name="380">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\CBF\380\sprockets%2F4f4c8476962893413bc66624ebedc372" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="CC7">
+                        <Folder name="2E0">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\CC7\2E0\sprockets%2F023b8be3432dbcd5782c630c541126d0" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="CD7">
+                        <Folder name="D70">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\CD7\D70\sprockets%2F32708873fd0783d951c3145ccd0bf00d" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="CDB">
+                        <Folder name="910">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\CDB\910\sprockets%2F26098b294d10eec3e946bb124334e5e4" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="CDF">
+                        <Folder name="840">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\CDF\840\sprockets%2Fa24609e2e582b845ec0b1d513946dc49" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="CE5">
+                        <Folder name="9C0">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\CE5\9C0\sprockets%2F28ee7473b751ef18220dd18571fa537e" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="CFF">
+                        <Folder name="700">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\CFF\700\sprockets%2F01dd26924cc1e03ca65189b2d4c8d602" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="D02">
+                        <Folder name="0A0">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\D02\0A0\sprockets%2F4ad413f3e3326481d2f5f9327bbd0e12" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="D10">
+                        <Folder name="940">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\D10\940\sprockets%2F4a4bbd85b145c862227ffc30f57b3793" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="D11">
+                        <Folder name="430">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\D11\430\sprockets%2F25ea8d6063b1eb98361b1196f2fce807" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="D1B">
+                        <Folder name="B00">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\D1B\B00\sprockets%2F8a44f445fb7d26a5d7c26bd678a29391" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="D3B">
+                        <Folder name="B20">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\D3B\B20\sprockets%2Fde0b42b18487f1e8b8a2b5f42544d55a" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="D41">
+                        <Folder name="B50">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\D41\B50\sprockets%2F03d9d80008b2a1ee6684f85a67e3ccc7" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="D82">
+                        <Folder name="4F0">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\D82\4F0\sprockets%2Fa8b012ba105b9c19bef1d145ae8a43d1" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="D84">
+                        <Folder name="210">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\D84\210\sprockets%2Fabd0103ccec2b428ac62c94e4c40b384" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="D91">
+                        <Folder name="560">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\D91\560\sprockets%2Fc2e2bc08c8eabdbfd462135f0e544480" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="D92">
+                        <Folder name="460">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\D92\460\sprockets%2F6163b42b95bd40fba4432fa75df41ccf" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="DA7">
+                        <Folder name="530">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\DA7\530\sprockets%2Fe36b8fcf5914a3a6bf058abfe7367b19" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="DA9">
+                        <Folder name="190">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\DA9\190\sprockets%2F6a79bb22e1dd5ac0869f95fec5c694a2" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="DAB">
+                        <Folder name="060">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\DAB\060\sprockets%2Ff767bf7733f9d255bda5d7ad033ab87f" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="DBB">
+                        <Folder name="EC0">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\DBB\EC0\sprockets%2Fdde363fc0da40dd0716ee2d4fd01405f" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="DC3">
+                        <Folder name="860">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\DC3\860\sprockets%2F90b1ba8c74a4d1b85bd5a4615b4cbfe7" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="DD4">
+                        <Folder name="AB0">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\DD4\AB0\sprockets%2Fcfa3f9ba9c8859dad4a5b4b9755ad500" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="E04">
+                        <Folder name="890">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\E04\890\sprockets%2F2f5173deea6c795b8fdde723bb4b63af" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="E2B">
+                        <Folder name="6C0">
+                            <File name="C:\Users\John\Rails\AW\tmp\cache\assets\E2B\6C0\sprockets%2Fa8e75fb35ddadada5da38b852c445f2d" />
+                        </Folder>
+                    </Folder>
+                </Folder>
+            </Folder>
+            <Folder name="pids">
+                <File name="C:\Users\John\Rails\AW\tmp\pids\server.pid" />
+            </Folder>
+            <Folder name="sessions" />
+            <Folder name="sockets" />
+        </Folder>
+        <Folder name="vendor">
+            <Folder name="assets">
+                <Folder name="stylesheets">
+                    <File name="C:\Users\John\Rails\AW\vendor\assets\stylesheets\.gitkeep" />
+                </Folder>
+            </Folder>
+            <Folder name="plugins">
+                <File name="C:\Users\John\Rails\AW\vendor\plugins\.gitkeep" />
+            </Folder>
+        </Folder>
+        <File name="C:\Users\John\Rails\AW\.gitignore" />
+        <File name="C:\Users\John\Rails\AW\.project" />
+        <File name="C:\Users\John\Rails\AW\config.ru" />
+        <File name="C:\Users\John\Rails\AW\Gemfile" />
+        <File name="C:\Users\John\Rails\AW\Gemfile.lock" />
+        <File name="C:\Users\John\Rails\AW\Gemfile.lock2" />
+        <File name="C:\Users\John\Rails\AW\Rakefile" />
+        <File name="C:\Users\John\Rails\AW\README" />
+    </Project>
+</NotepadPlus>
