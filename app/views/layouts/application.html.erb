@@ -37,7 +37,9 @@
 	<%= render 'home/slideshow' %>
 <% end %>
 <% if controller.controller_name=='organisations' then %>
-	<%= render 'organisations/single' %>
+	<% if controller.action_name =='show' %>
+		<%= render 'organisations/single' %>
+	<% end %>
 <% end %>
 
 <div class="main wrap">
