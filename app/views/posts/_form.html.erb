@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :organisation_id %><br />
-    <%= f.select :organisation_id, @organisations, {:include_blank => true} %>
+    <%= f.number_field :organisation_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

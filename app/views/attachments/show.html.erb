@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+   <td><%= image_tag @attachment.pic.url(:medium) %></td>
+<p>
+  <b>Post:</b>
+  <%= @attachment.post_id %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%= @attachment.event_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_attachment_path(@attachment) %> |
+<%= link_to 'Back', attachments_path %>

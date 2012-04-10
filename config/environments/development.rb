@@ -27,4 +27,8 @@ AsianWeek::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # gem.config "paperclip"
+  config.gem 'paperclip'
+  
 end

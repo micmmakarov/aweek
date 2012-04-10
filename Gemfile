@@ -10,6 +10,7 @@ gem 'sqlite3'
 end
 
 gem 'heroku'
+gem 'paperclip'
 gem 'devise'
 gem 'omniauth-facebook'
 
@@ -27,6 +28,7 @@ group :production do
   gem 'pg'
   gem 'execjs'
   gem 'therubyracer'
+  gem 'libv8', '3.3.10.4'
 end
 
 # To use ActiveModel has_secure_password
