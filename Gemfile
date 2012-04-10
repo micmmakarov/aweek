@@ -11,6 +11,7 @@ end
 
 gem 'heroku'
 gem 'paperclip'
+gem 'aws-s3'
 gem 'devise'
 gem 'omniauth-facebook'
 

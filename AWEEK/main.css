@@ -406,7 +406,7 @@ background: #f3f3f3;
 
 /* IMPORTED */
 #featured {
-	background:#fff url(../images/navbar-shadow.png) repeat-x top left;
+	background:#fff url(/assets/navbar-shadow.png) repeat-x top left;
 	padding:0 15px;
 	overflow:hidden;
 	}

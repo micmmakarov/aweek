@@ -474,7 +474,7 @@ border-bottom: 1px solid #CBF5FC;
 
 /* IMPORTED */
 #featured {
-	background:#fff url(/assets//assets/navbar-shadow.png) repeat-x top left;
+	background:#fff url(/assets/navbar-shadow.png) repeat-x top left;
 	padding:0 15px;
 	overflow:hidden;
 	}
