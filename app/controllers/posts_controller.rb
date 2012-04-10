@@ -28,6 +28,7 @@ class PostsController < ApplicationController
   # GET /posts/new.json
   def new
     @post = Post.new
+	5.times { @post.attachments.build }
     @organisations = Organisation.all
 
 	if params[:ajax1] then

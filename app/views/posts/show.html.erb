@@ -18,6 +18,11 @@
 	<p id="notice"><%= notice %></p>
 	
 	<div class=post-title> <%= @post.title %></div>
+	
+	<% @post.attachments.each do |attachment| %>
+		<%= image_tag attachment.pic.url(:medium) %>
+	<% end %>
+	
 	<div class=post-description>
 	<% if @post.user_id!=0 then
 	puts @post.user.name 

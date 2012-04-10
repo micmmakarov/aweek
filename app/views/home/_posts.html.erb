@@ -13,6 +13,10 @@
                         <div class="postcontent">
                             <p><%= post.title %></p>
                         </div>
+						<% post.attachments.each do |attachment| %>
+							<%= image_tag attachment.pic.url(:thumb) %>
+						<% end %>
+
                     </div>
                 </div>
                 </a>
