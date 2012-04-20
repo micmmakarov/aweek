@@ -10,11 +10,13 @@ gem 'sqlite3'
 end
 
 gem 'heroku'
-gem 'paperclip'
-gem 'aws-s3'
-gem 'aws-sdk'
+gem 'paperclip-aws'
+#gem 'paperclip'
+#gem 'aws-s3'
+#gem 'aws-sdk'
 gem 'devise'
 gem 'omniauth-facebook'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
