@@ -5,6 +5,7 @@ class HomeController < ApplicationController
     @posts = Post.all
     @events = Event.all 
     @organisations = Organisation.all 
+	@attachments = Attachment.all
   end
 
 end

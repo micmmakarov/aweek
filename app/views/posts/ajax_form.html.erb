@@ -7,8 +7,7 @@
 
 
 <div class=title>Article title</div><%= f.text_field :title, :class => 'input' %><div class=clear></div>
-<div class=title>byline</div><%= f.number_field :organisation_id, :class => 'input' %><div class=clear></div>
-<div class=title>Organisation</div><%= select_tag 'post[organisation_id]', options_from_collection_for_select(@organisations, :id, :name) %><div class=clear></div>
+<div class=title>Organisation</div><%= select_tag 'post[organisation_id]', options_from_collection_for_select(@organisations, :id, :name), :class => 'input' %><div class=clear></div>
 
 
 <div class=title>article</div><%= f.text_area :content %>

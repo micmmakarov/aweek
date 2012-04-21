@@ -32,6 +32,10 @@ GEM
     addressable (2.2.7)
     ansi (1.4.2)
     arel (2.2.3)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
     aws-sdk (1.4.1)
       httparty (~> 0.7)
       json (~> 1.4)
@@ -100,15 +104,12 @@ GEM
       oauth2 (~> 0.5.0)
       omniauth (~> 1.0)
     orm_adapter (0.0.6)
-    paperclip (3.0.2)
+    paperclip (3.0.0)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
       cocaine (>= 0.0.2)
       mime-types
-    paperclip-aws (1.6.6)
-      aws-sdk (>= 1.2.0)
-      paperclip (>= 2.5.0)
     pg (0.11.0)
     pg (0.11.0-x86-mingw32)
     polyglot (0.3.3)
@@ -171,12 +172,15 @@ GEM
     uuidtools (2.1.2)
     warden (1.1.1)
       rack (>= 1.0)
+    xml-simple (1.1.1)
 
 PLATFORMS
   ruby
   x86-mingw32
 
 DEPENDENCIES
+  aws-s3
+  aws-sdk
   coffee-rails (~> 3.1.1)
   devise
   execjs
@@ -184,7 +188,7 @@ DEPENDENCIES
   jquery-rails
   libv8 (= 3.3.10.4)
   omniauth-facebook
-  paperclip-aws
+  paperclip (= 3.0.0)
   pg
   rails (= 3.1.1)
   sass-rails (~> 3.1.4)

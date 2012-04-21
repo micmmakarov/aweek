@@ -10,10 +10,10 @@ gem 'sqlite3'
 end
 
 gem 'heroku'
-gem 'paperclip-aws'
-#gem 'paperclip'
-#gem 'aws-s3'
-#gem 'aws-sdk'
+#gem 'paperclip-aws'
+gem 'paperclip', '3.0.0'
+gem 'aws-s3'
+gem 'aws-sdk'
 gem 'devise'
 gem 'omniauth-facebook'
 

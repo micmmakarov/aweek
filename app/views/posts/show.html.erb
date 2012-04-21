@@ -1,3 +1,76 @@
+<div class=slideshow2>
+
+<div class=left160> &nbsp;
+</div>
+
+ <div id="featured">
+ 
+	<% @post.attachments.each do |attachment| %>
+		<%= image_tag attachment.pic.url(:medium) %>
+	<% end %>
+    	<!--
+		<ul id="items">
+        	<li>
+                <a href="#"><img src="images/thumbs/pic1.png" alt="" />
+                <span><strong>A Look Back on the 7 Years of Magic</strong><em>961 views</em><div class="likes">15 likes</div></span>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="images/thumbs/pic2.png" alt="" />
+                <span><strong>A Look Back on the 7 Years of Magic</strong><em>961 views</em><div class="likes">15 likes</div></span>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="images/thumbs/pic3.png" alt="" />
+                <span><strong>A Look Back on the 7 Years of Magic</strong><em>961 views</em><div class="likes">15 likes</div></span>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="images/thumbs/pic4.png" alt="" />
+                <span><strong>A Look Back on the 7 Years of Magic</strong><em>961 views</em><div class="likes">15 likes</div></span>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="images/thumbs/pic5.png" alt="" />
+                <span><strong>A Look Back on the 7 Years of Magic</strong><em>961 views</em><div class="likes">15 likes</div></span>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="images/thumbs/pic1.png" alt="" />
+                <span><strong>A Look Back on the 7 Years of Magic</strong><em>961 views</em><div class="likes">15 likes</div></span>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="images/thumbs/pic2.png" alt="" />
+                <span><strong>A Look Back on the 7 Years of Magic</strong><em>961 views</em><div class="likes">15 likes</div></span>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="images/thumbs/pic3.png" alt="" />
+                <span><strong>A Look Back on the 7 Years of Magic</strong><em>961 views</em><div class="likes">15 likes</div></span>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="images/thumbs/pic4.png" alt="" />
+                <span><strong>A Look Back on the 7 Years of Magic</strong><em>961 views</em><div class="likes">15 likes</div></span>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="images/thumbs/pic5.png" alt="" />
+                <span><strong>A Look Back on the 7 Years of Magic</strong><em>961 views</em><div class="likes">15 likes</div></span>
+                </a>
+            </li>
+        </ul>
+        <div class="clrflt"></div>
+		-->
+    </div>
+
+</div>
+						
+						
+						
+						
+<!-- POST BODY -->
 <div class="main wrap">
 	
 	<div class=left-menu>
@@ -19,22 +92,17 @@
 	
 	<div class=post-title> <%= @post.title %></div>
 	
-	<% @post.attachments.each do |attachment| %>
-		<%= image_tag attachment.pic.url(:medium) %>
-	<% end %>
 	
 	<div class=post-description>
-	<% if @post.user_id!=0 then
-	puts @post.user.name 
-	end %> - <%= @post.created_at.strftime("%B %d, %Y") %></div>
+	<% if @post.user_id!=0 then %>
+	By <%= @post.user.name %>
+	<% end %> - <%= @post.created_at.strftime("%B %d, %Y") %></div>
 	<div class=post-content><%= @post.content %></div>
 	</div>
 	
 
 	
-	  <b>Organisation:</b>
-	  <%= @post.organisation_id %>
-	</p>
+
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
