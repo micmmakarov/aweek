@@ -1,45 +1,40 @@
-<div class=slideshow>
+ <%= stylesheet_link_tag    "organisations", :media => 'screen,projection' %>
+
+<div class=slideshow2>
 
 <div class="main wrap">
-<p id="notice"><%= notice %></p>
 
+<div class=left160> &nbsp;
 <%= render 'organisations/follow' %>
-
-<%= image_tag @organisation.pic.url(:thumb) %>
-<p>
-  <b>User:</b>
-  <%= @organisation.user_id %>
-</p>
-
-<p>
-  <b>Name:</b>
-  <%= @organisation.name %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @organisation.address %>
-</p>
-
-<p>
-  <b>Contacts:</b>
-  <%= @organisation.contacts %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @organisation.description %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @organisation.city %>
-</p>
-
-
-<%= link_to 'Edit', edit_organisation_path(@organisation) %> |
-<%= link_to 'Back', organisations_path %>
-
 </div>
 
+<div class=body style="padding-top:0px;margin-top:0px;">
+
+<p id="notice"><%= notice %></p>
+
+
+
+<div class=unit style="border:none;padding-top:none;margin-top:0px;">
+    <div class="unit-pic org-pic" style="background: url('<%= @organisation.pic.url(:thumb) %>');width:60px;height:60px;"></div>
+	<div class=rightpart>
+    <div class=name><%= @organisation.name %></div>
+    <div class=alignright>
+	<div class=unit-user><%= @organisation.user.name %></div>
+    <div class=city><%= @organisation.city %></div>
+	</div>
+	<div class=clear></div>
+    <div class=unit-address><%= @organisation.address %></div>
+    <div class=unit-contact><%= @organisation.contacts %></div>
+	</div>
+	<div class=clear></div>
+    <div class=unit-description><%= @organisation.description %></div>
+    <div><%= link_to 'Show', @organisation %>
+    <%= link_to 'Edit', edit_organisation_path(@organisation) %>
+    <%= link_to 'Destroy', @organisation, confirm: 'Are you sure?', method: :delete %></div>
+</div>
+
+
+
+</div>
+</div>
 </div>

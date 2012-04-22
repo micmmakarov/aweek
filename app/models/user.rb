@@ -12,14 +12,16 @@ class User < ActiveRecord::Base
   
   
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
-  has_many :followed_organisations, through: :relationships, source: "organisation_id"
+  has_many :followed_organisations, through: :relationships, class_name: "Organisation"
   
-  def follow!(other_user)
-    relationships.create!(followed_id: other_user.id)
-  end
   
   def follow_organisation!(organisation)
     relationships.create!(organisation_id: organisation.id)
   end
+
+  def unfollow_organisation!(organisation)
+    relationships.destroy!(organisation_id: organisation.id)
+  end
+
   
 end

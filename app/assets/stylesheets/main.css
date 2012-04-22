@@ -8,6 +8,27 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Maven Pro', sans-serif;
 
 */
+.btn-follow {
+background:blue;
+padding:20px;
+border-radius:10px;
+font-size:20px;
+margin:5px;
+color:white;
+cursor:pointer;
+}
+
+.btn-unfollow {
+background:red;
+padding:20px;
+border-radius:10px;
+font-size:20px;
+margin:5px;
+color:white;
+cursor:pointer;
+
+}
+
 .org-pic {
 border-radius:10px;
 }
@@ -947,4 +968,3 @@ text-decoration:none;
 	display:inline;
 	}
 
-	

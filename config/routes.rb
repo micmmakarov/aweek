@@ -20,6 +20,8 @@ AsianWeek::Application.routes.draw do
 
   resources :users
   
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  
     get '/login' => "devise/sessions#new"
 	
   # The priority is based upon order of creation:
