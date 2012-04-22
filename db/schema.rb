@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120422023437) do
+ActiveRecord::Schema.define(:version => 20120422165805) do
 
   create_table "attachments", :force => true do |t|
     t.integer  "post_id"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20120422023437) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "city"
+    t.integer  "category_id"
   end
 
   create_table "organisations", :force => true do |t|
@@ -52,6 +53,11 @@ ActiveRecord::Schema.define(:version => 20120422023437) do
     t.string   "city"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "category_id"
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_updated_at"
   end
 
   create_table "posts", :force => true do |t|
@@ -62,7 +68,26 @@ ActiveRecord::Schema.define(:version => 20120422023437) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category_id"
+    t.boolean  "published"
+    t.boolean  "featured"
   end
+
+  create_table "relationships", :force => true do |t|
+    t.integer  "follower_id"
+    t.integer  "followed_id"
+    t.integer  "organisation_id"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "relationships", ["category_id"], :name => "index_relationships_on_category_id"
+  add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
+  add_index "relationships", ["follower_id", "category_id"], :name => "index_relationships_on_follower_id_and_category_id", :unique => true
+  add_index "relationships", ["follower_id", "followed_id"], :name => "index_relationships_on_follower_id_and_followed_id", :unique => true
+  add_index "relationships", ["follower_id", "organisation_id"], :name => "index_relationships_on_follower_id_and_organisation_id", :unique => true
+  add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
+  add_index "relationships", ["organisation_id"], :name => "index_relationships_on_organisation_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

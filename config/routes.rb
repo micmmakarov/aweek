@@ -4,6 +4,8 @@ AsianWeek::Application.routes.draw do
 	resources :posts
   end
 
+  resources :relationships, only: [:create, :destroy]
+  
   resources :attachments
 
   resources :organisations

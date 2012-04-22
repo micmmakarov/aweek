@@ -3,6 +3,9 @@
 <div class="main wrap">
 <p id="notice"><%= notice %></p>
 
+<%= render 'organisations/follow' %>
+
+<%= image_tag @organisation.pic.url(:thumb) %>
 <p>
   <b>User:</b>
   <%= @organisation.user_id %>

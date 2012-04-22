@@ -6,7 +6,7 @@
                 <!-- Post Start-->
                
                 <div class="post clearfix">
-                    <img src="images/post-icon.jpg" class="alignleft" alt="" />
+				    <div class="unit-pic org-pic alignleft" style="background: url('<%= post.organisation.pic.url(:thumb) %>');width:58px;height:60px;"></div>
                     <div class="desc">
                         <p class="postmetadata"><strong><a class=post-organisation href='<%= url_for(post.organisation) %>'><%= post.organisation.name %></a></strong> · <%= post.created_at.strftime("%B %d, %Y") %> · <small><%= post.created_at.strftime("%I:%M %p") %></small></p>
 						<a href='<%= url_for(post.category) %>'>

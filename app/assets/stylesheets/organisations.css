@@ -1,0 +1,50 @@
+.unit {
+color:#666666;
+border-bottom: 1px solid #CBF5FC;
+padding:20px 0px;
+margin: 20px 0px;
+}
+
+.unit-pic {
+float:left;
+margin:5px;
+}
+.alignright {
+float:right;
+}
+.rightpart {
+float:left;
+width:80%;
+}
+.unit-address {
+padding:5px 5px;
+font-size:12px;
+font-color:#999999;
+float:left;
+}
+.unit-contact {
+padding:5px 5px;
+font-size:12px;
+font-color:#999999;
+float:left;
+}
+
+.unit .name {
+font-size:30px;
+float:left;
+padding:5px;
+}
+.unit-user {
+color:#999999;
+font-size:12px;
+}
+.unit .city {
+color:#666666;
+font-size:14px;
+}
+.unit-description {
+padding:10px 0px;
+	font-family: 'Maven Pro', sans-serif;
+	font-size:14px;
+	color:#333333;
+}

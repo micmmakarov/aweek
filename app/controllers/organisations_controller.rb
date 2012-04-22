@@ -27,6 +27,7 @@ class OrganisationsController < ApplicationController
   # GET /organisations/new.json
   def new
     @organisation = Organisation.new
+	@categories = Category.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,6 +38,7 @@ class OrganisationsController < ApplicationController
   # GET /organisations/1/edit
   def edit
     @organisation = Organisation.find(params[:id])
+	@categories = Category.all
   end
 
   # POST /organisations

@@ -26,6 +26,7 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
 	@organisations = Organisation.all
+	@categories = Category.all
 	5.times { @event.attachments.build }
 
     respond_to do |format|
@@ -38,6 +39,7 @@ class EventsController < ApplicationController
   def edit
     @event = Event.find(params[:id])
 	@organisations = Organisation.all
+	@categories = Category.all
 	5.times { @event.attachments.build }
 	
   end
