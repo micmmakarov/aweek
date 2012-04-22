@@ -1,5 +1,10 @@
 <div class=logo-space>
-	<%= link_to ' ', {:controller => 'home', :action => 'index'}, :class => 'home-link' %>
+	<% if user_signed_in? then %>
+		<%= link_to ' ', {:controller => 'home', :action => 'index'}, :class => 'home-link' %>
+	<% else %>
+		<%= link_to ' ', '/', :class => 'home-link' %>
+		
+	<% end %>
 	<div class=wrap>
 		<div class=hide-left>
 		</div>
