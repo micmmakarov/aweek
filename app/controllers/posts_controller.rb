@@ -30,6 +30,7 @@ class PostsController < ApplicationController
     @post = Post.new
 	5.times { @post.attachments.build }
     @organisations = Organisation.all
+    @categories = Category.all
 
 	if params[:ajax1] then
 		render 'posts/ajax_form', :layout => false
@@ -46,6 +47,9 @@ class PostsController < ApplicationController
   def edit
     @organisations = Organisation.all
     @post = Post.find(params[:id])
+	5.times { @post.attachments.build }
+	@categories = Category.all
+
   end
 
   # POST /posts

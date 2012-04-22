@@ -11,6 +11,22 @@
     </div>
   <% end %>
 
+           <% f.fields_for :attachments do |attachment| %>
+	             
+<% end %>
+	 
+<%= f.fields_for :attachments do |attachment| %>
+	<% if attachment.object.new_record? %>
+		<%= attachment.file_field :pic %>
+	<% end %>
+	<% unless attachment.object.new_record? %>        
+		<div class="thumbnail">
+			<%= link_to( image_tag(attachment.object.pic.url(:thumb)), attachment.object.pic.url(:original) ) %>
+			Delete?<%= attachment.check_box :_destroy %>
+		</div>                
+	<% end %>   
+<% end %>
+  
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -29,8 +45,9 @@
   </div>
   <div class="field">
     <%= f.label :organisation_id %><br />
-    <%= f.number_field :organisation_id %>
+    <%= select_tag 'post[organisation_id]', options_from_collection_for_select(@organisations, :id, :name) %>
   </div>
+
   <div class="field">
     <%= f.label :address %><br />
     <%= f.text_field :address %>

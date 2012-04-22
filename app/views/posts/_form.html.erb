@@ -10,14 +10,23 @@
       </ul>
     </div>
   <% end %>
-
-          <%= f.fields_for :attachments do |attachment| %>
-        
-           <% if attachment.object.new_record? %>
-                 <%= attachment.file_field :pic %>
-           <% end %>
-
-			<% end %>
+			
+<% f.fields_for :attachments do |attachment| %>
+	             
+<% end %>
+	 
+<%= f.fields_for :attachments do |attachment| %>
+	<% if attachment.object.new_record? %>
+		<%= attachment.file_field :pic %>
+	<% end %>
+	<% unless attachment.object.new_record? %>        
+		<div class="thumbnail">
+			<%= link_to( image_tag(attachment.object.pic.url(:thumb)), attachment.object.pic.url(:original) ) %>
+			Delete?<%= attachment.check_box :_destroy %>
+		</div>                
+	<% end %>   
+<% end %>
+	 
   
   <div class="field">
     <%= f.label :title %><br />
@@ -30,6 +39,10 @@
   <div class="field">
     <%= f.label :user_id %><br />
     <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id %><br />
+    <%= select_tag 'post[category_id]', options_from_collection_for_select(@categories, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :organisation_id %><br />

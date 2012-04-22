@@ -2,9 +2,19 @@
 	<div class=title>UPCOMING EVENTS</div>
 		<div class=content>
 			
+			<% first_time = 0 %>
+			
 			<% @events.each do |event| %>
 			
 				<div class=event>
+					
+					<% if first_time==0 then %>
+						<% event.attachments.each do |attachment| %>
+							<a href="#"><div class=thumb-pic style="background:url('<%= attachment.pic.url(:thumb) %>');">.</div></a>
+							<% first_time = 1 %>
+							<% break %>
+						<% end %>
+					<% end %>
 					
 					<div class=date>
 						<%= event.date.strftime("%B %d") %>

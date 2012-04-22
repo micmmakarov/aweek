@@ -9,12 +9,21 @@
                     <img src="images/post-icon.jpg" class="alignleft" alt="" />
                     <div class="desc">
                         <p class="postmetadata"><strong><%= post.organisation.name %></strong> · Oct 20, 2011 · <small>10:33pm</small></p>
-                        <div class="category">Category</div>
+                        <div class="category">
+							<%= post.category.name %>
+						</div>
                         <div class="postcontent">
                             <p><%= post.title %></p>
                         </div>
-						<% post.attachments.each do |attachment| %>
-							<%= image_tag attachment.pic.url(:thumb) %>
+						
+						<% if post.attachments.length == 1 then %>
+							<% post.attachments.each do |attachment| %>
+								<%= image_tag attachment.pic.url(:medium) %>
+							<% end %>
+						<% else %>
+							<% post.attachments.each do |attachment| %>
+								<%= image_tag attachment.pic.url(:thumb) %>
+							<% end %>
 						<% end %>
 
                     </div>
