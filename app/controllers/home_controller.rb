@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  skip_before_filter :authenticate_user!
+  skip_before_filter :authenticate_user!, :except => :profile
   
   def index
     @posts = Post.all(:order => "created_at DESC")
@@ -7,5 +7,8 @@ class HomeController < ApplicationController
     @organisations = Organisation.all 
 	@attachments = Attachment.all
   end
-
-end
+  
+  def profile
+  end
+  
+  end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120422165805) do
+ActiveRecord::Schema.define(:version => 20120422201361) do
 
   create_table "attachments", :force => true do |t|
     t.integer  "post_id"
@@ -27,6 +27,12 @@ ActiveRecord::Schema.define(:version => 20120422165805) do
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cities", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -81,14 +87,6 @@ ActiveRecord::Schema.define(:version => 20120422165805) do
     t.datetime "updated_at"
   end
 
-  add_index "relationships", ["category_id"], :name => "index_relationships_on_category_id"
-  add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
-  add_index "relationships", ["follower_id", "category_id"], :name => "index_relationships_on_follower_id_and_category_id", :unique => true
-  add_index "relationships", ["follower_id", "followed_id"], :name => "index_relationships_on_follower_id_and_followed_id", :unique => true
-  add_index "relationships", ["follower_id", "organisation_id"], :name => "index_relationships_on_follower_id_and_organisation_id", :unique => true
-  add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
-  add_index "relationships", ["organisation_id"], :name => "index_relationships_on_organisation_id"
-
   create_table "users", :force => true do |t|
     t.string   "name"
     t.integer  "role"
@@ -104,6 +102,7 @@ ActiveRecord::Schema.define(:version => 20120422165805) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "city"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

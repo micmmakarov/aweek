@@ -3,6 +3,7 @@
 <div class=control-panel>
 	<div class=wrap>
                 <ul>
+                    <li><a href="/posts/new">Write a Post</a></li>
                     <li><a href="#">Users</a></li>
                     <li><a href="#">Share</a></li>
                     <li><a href="#">Join</a></li>
@@ -13,7 +14,7 @@
 
                 <ul>
                     <li><a href="#"><%= current_user.name %></a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="/profile">Profile</a></li>
 					<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
                 </ul>
 

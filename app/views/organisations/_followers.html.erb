@@ -1,0 +1,22 @@
+<div class=links>
+	<div class=title>FOLLOWERS</div>
+		<div class=content>
+			
+			<% first_time = 0 %>
+			
+			<% @organisation.followers.each do |follower| %>
+			
+				<div class=event>
+					
+					<div class=event-title>
+						<%= follower.name %>
+					</div>
+					<div class=event-address>
+						<%= follower.city %>
+					</div>
+				</div>
+			
+			<% end %>
+		</div>
+
+	</div>
