@@ -89,6 +89,7 @@ background:green;
 }
 
 
+
 .wrap {
 max-width:1440px;
 min-width:290px;
@@ -314,10 +315,20 @@ display:block;
 /* LOGO-SPACE */
 
 .logo-space {
+position:relative;
 padding-top:39px;
 height:145px;
 width:100%;
 overflow:hidden;
+}
+.home-link {
+position:absolute;
+display:block;
+height:140px;
+width:150px;
+z-index:9999;
+left:50%;
+margin-left:-75px;
 }
 
 .logo-space .wrap {
@@ -869,6 +880,15 @@ background:none;
 	margin-bottom:20px;
 	border-bottom:1px solid #cbf5fc;
 	}
+
+.post-link,.post-link:active, .post-link:visited {
+color: #333333;
+text-decoration: none;
+}
+.post-link:hover {
+color: #111111;
+}
+
 	
 .post .desc {
 	margin-left:70px;
@@ -880,6 +900,16 @@ background:none;
 	padding-bottom:15px;
 	line-height:normal;
 	}
+
+.post-organisation, .post-organisation:visited, .post-organisation:active {
+color:#666666;
+text-decoration:none;
+}
+.post-organisation:hover {
+color:#111111;
+text-decoration:none;
+}
+
 	
 .post .desc p.postmetadata strong{
 	font-weight:normal;

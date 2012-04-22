@@ -4,16 +4,20 @@
 <% @posts.each do |post| %>
 	
                 <!-- Post Start-->
-                <a class=nothing href='<%= url_for(post) %>'>
+               
                 <div class="post clearfix">
                     <img src="images/post-icon.jpg" class="alignleft" alt="" />
                     <div class="desc">
-                        <p class="postmetadata"><strong><%= post.organisation.name %></strong> · Oct 20, 2011 · <small>10:33pm</small></p>
-                        <div class="category">
-							<%= post.category.name %>
-						</div>
+                        <p class="postmetadata"><strong><a class=post-organisation href='<%= url_for(post.organisation) %>'><%= post.organisation.name %></a></strong> · <%= post.created_at.strftime("%B %d, %Y") %> · <small><%= post.created_at.strftime("%I:%M %p") %></small></p>
+						<a href='<%= url_for(post.category) %>'>
+							<div class="category">
+								<%= post.category.name %>
+							</div>
+						</a>
                         <div class="postcontent">
-                            <p><%= post.title %></p>
+                             <a class=post-link href='<%= url_for(post) %>'>
+							<p><%= post.title %></p>
+							</a>
                         </div>
 						
 						<% if post.attachments.length == 1 then %>
@@ -28,7 +32,7 @@
 
                     </div>
                 </div>
-                </a>
+                
                 
      
 
