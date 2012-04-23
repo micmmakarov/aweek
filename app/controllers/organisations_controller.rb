@@ -1,4 +1,6 @@
 class OrganisationsController < ApplicationController
+  before_filter :authenticate_user!, :except => [:show, :index]
+
   # GET /organisations
   # GET /organisations.json
   def index

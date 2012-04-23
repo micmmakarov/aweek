@@ -30,9 +30,15 @@
 	</div>
 	<div class=clear></div>
     <div class=unit-description><%= organisation.description %></div>
-    <div><%= link_to 'Show', organisation %>
-    <%= link_to 'Edit', edit_organisation_path(organisation) %>
-    <%= link_to 'Destroy', organisation, confirm: 'Are you sure?', method: :delete %></div>
+    <div><%= link_to 'Show', organisation %></div>
+
+	<% if user_signed_in? then %>
+		<% if current_user.role==17 then %>
+			<div><%= link_to 'Edit', edit_organisation_path(organisation) %>
+			<%= link_to 'Destroy', organisation, confirm: 'Are you sure?', method: :delete %></div>
+		<% end %>
+	<% end %>
+	
 </div>
 
 <% end %>

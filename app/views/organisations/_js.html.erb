@@ -1,102 +1,3 @@
-  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&region=us"></script>
-
-<style>
-	.map_container {
-		width: 800px;
-		height:400px;	
-	}
-	#map_canvas_cont, #pano_cont {
-		float: left;
-		width: 350px;
-		height: 300px;
-		margin: 20px;
-	}
-
-	#pano, #map_canvas {
-		width: 100%;
-		height: 100%;
-	}
-</style>
-
-<%= form_for(@event) do |f| %>
-  <% if @event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
-      <ul>
-      <% @event.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-           <% f.fields_for :attachments do |attachment| %>
-	             
-<% end %>
-	 
-<%= f.fields_for :attachments do |attachment| %>
-	<% if attachment.object.new_record? %>
-		<%= attachment.file_field :pic %>
-	<% end %>
-	<% unless attachment.object.new_record? %>        
-		<div class="thumbnail">
-			<%= link_to( image_tag(attachment.object.pic.url(:thumb)), attachment.object.pic.url(:original) ) %>
-			Delete?<%= attachment.check_box :_destroy %>
-		</div>                
-	<% end %>   
-<% end %>
-  
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br />
-    <%= f.datetime_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :organisation_id %><br />
-    <%= select_tag 'post[organisation_id]', options_from_collection_for_select(@organisations, :id, :name) %>
-  </div>
-
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address, :class => 'address' %>
-	<a href="#" class=validate>Validate</a>
-  </div>
-		<div class="map_container">
-			<div id="map_canvas_cont">
-				<div id="map_canvas"></div>
-			</div>
-			<div id="pano_cont">
-				<div id="pano"></div>
-			</div>
-		</div>	  
-  
-    <div class="field">
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </div>
-   <div class="field">
-    <%= f.label :category_id %><br />
-    <%= select_tag 'post[category_id]', options_from_collection_for_select(@categories, :id, :name) %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-
-
 <script>
 
 		var panorama;
@@ -112,7 +13,6 @@
 			    if (status == google.maps.GeocoderStatus.OK) {
 
 					var gps = results[0].geometry.location;	
-					alert(gps);
 					create_map_and_streetview(gps.lat(), gps.lng(), 'map_canvas', 'pano');
 			    }
 			});
@@ -192,13 +92,5 @@
 		return angle;
     }
 		console.log("before $");		    	
-		$(document).ready(function() {		
-			console.log("doc ready");		    	
-
-			$('.validate').click(function(e){
-				e.preventDefault();
-				load_map_and_street_view_from_address($(".address").val());
-			});
-
-		});
+		
 	</script>	

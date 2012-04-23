@@ -17,6 +17,8 @@ AsianWeek::Application.routes.draw do
   get "home/index"
   get 'profile' => 'users#profile'
   get 'calendar' => 'events#calendar'
+  get 'feed' => 'home#index', :feed => 1
+  get 'all' => 'home#index', :feed => 0
 
   devise_for :users
 

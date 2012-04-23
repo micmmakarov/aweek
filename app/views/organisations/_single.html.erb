@@ -1,11 +1,12 @@
- <%= stylesheet_link_tag    "organisations", :media => 'screen,projection' %>
+   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&region=us"></script>
+	<%= stylesheet_link_tag    "organisations", :media => 'screen,projection' %>
 
 <div class=slideshow2>
 
 <div class="main wrap">
 
 <div class=left160> &nbsp;
-<%= render 'organisations/follow' %>
+
 </div>
 
 <div class=body style="padding-top:0px;margin-top:0px;">
@@ -28,13 +29,54 @@
 	</div>
 	<div class=clear></div>
     <div class=unit-description><%= @organisation.description %></div>
-    <div><%= link_to 'Show', @organisation %>
-    <%= link_to 'Edit', edit_organisation_path(@organisation) %>
-    <%= link_to 'Destroy', @organisation, confirm: 'Are you sure?', method: :delete %></div>
+	<% if user_signed_in? then %>
+		<% if current_user.role==17 then %>
+			<div><%= link_to 'Edit', edit_organisation_path(organisation) %>
+			<%= link_to 'Destroy', organisation, confirm: 'Are you sure?', method: :delete %></div>
+		<% end %>
+	<% end %>
+	<%= render 'organisations/follow' %>
 </div>
 
 
 
 </div>
+<div class=events>
+	<style>
+		.map_container {
+			width: 800px;
+			min-height:300px;	
+		}
+		#map_canvas_cont, #pano_cont {
+			float: left;
+			width: 200px;
+			height: 200px;
+			margin: 20px;
+		}
+
+		#pano, #map_canvas {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<div class="map_container">
+			<div id="map_canvas_cont">
+				<div id="map_canvas"></div>
+			</div>
+			<div id="pano_cont">
+				<div id="pano"></div>
+			</div>
+		</div>	 
+
 </div>
 </div>
+</div>
+
+<%= render "organisations/js" %>
+<script>
+$(document).ready(function() {		
+
+				load_map_and_street_view_from_address("<%= @organisation.address %>");
+
+		});
+</script>

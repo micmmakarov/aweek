@@ -9,22 +9,21 @@ font-family: 'Maven Pro', sans-serif;
 
 */
 .btn-follow {
-background:blue;
-padding:20px;
+border:0px;
+padding:5px 20px;
 border-radius:10px;
 font-size:20px;
 margin:5px;
-color:white;
+color:darkorange;
 cursor:pointer;
 }
 
 .btn-unfollow {
-background:red;
-padding:20px;
+padding:5px 20px;
 border-radius:10px;
 font-size:20px;
 margin:5px;
-color:white;
+color:red;
 cursor:pointer;
 
 }
@@ -183,6 +182,7 @@ font-size: 13px;
 text-decoration:none;
 color:#666666;
 text-shadow: 1px 1px 0px white;
+padding:0px 10px;
 }
 
 .control-panel ul li {
@@ -190,11 +190,12 @@ padding-top:9px;
 float:left;
 margin-right:25px;
 margin-left:25px;
+height:37px;
 }
 .control-panel ul:first-child li {
 margin-right:0;
 margin-left:0;
-width:80px;
+width:100px;
 height:37px;
 text-align:center;
 color:white !important;
@@ -644,6 +645,25 @@ font-size:11px;
 padding-bottom: 15px;
 border-bottom: 1px solid #cbf5fc;
 margin-bottom:18px;
+}
+
+.left-menu a:active {
+color:#DF2C3C;
+font-family: 'Open Sans', sans-serif;
+font-size:11px;
+padding-bottom: 10px;
+margin-bottom:10px;
+display:block;
+text-decoration:none;
+}
+.left-menu a {
+color:#666666;
+font-family: 'Open Sans', sans-serif;
+font-size:11px;
+padding-bottom: 10px;
+margin-bottom:10px;
+display:block;
+text-decoration:none;
 }
 
 .left-menu {
