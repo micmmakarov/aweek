@@ -32,7 +32,9 @@
 <%= render 'home/menu' %>
 
 <% if controller.controller_name=='home' then %>
-	<%= render 'home/slideshow' %>
+	<% if controller.action_name =='index' %>
+		<%= render 'home/slideshow' %>
+	<% end %>
 <% end %>
 <% if controller.controller_name=='organisations' then %>
 	<% if controller.action_name =='show' %>

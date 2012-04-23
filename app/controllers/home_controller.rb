@@ -8,6 +8,11 @@ class HomeController < ApplicationController
 	@attachments = Attachment.all
   end
   
+  def neighborhoods
+    @events = Event.all(:order => "created_at DESC")
+    @organisations = Organisation.all 
+  end
+  
   def profile
   end
   

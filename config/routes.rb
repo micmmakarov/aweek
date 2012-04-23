@@ -19,6 +19,7 @@ AsianWeek::Application.routes.draw do
   get 'calendar' => 'events#calendar'
   get 'feed' => 'home#index', :feed => 1
   get 'all' => 'home#index', :feed => 0
+  get 'neighborhoods' => 'home#neighborhoods', :feed => 1
 
   devise_for :users
 
