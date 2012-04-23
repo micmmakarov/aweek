@@ -1,18 +1,17 @@
   <%= stylesheet_link_tag    "organisations", :media => 'screen,projection' %>
 
-
-<div class=left-menu>
+<!--<div class=left-menu>
 	<div class=title>YOUR NEWS FEED</div>
 		<div class=content>
 		</div>
-	</div>
+	</div> -->
 	
 	<style>
 		 .unit {
 		border-radius:5px;
 		box-shadow: 3px 3px 10px rgba(0,0,0,0.02);
 		box-shadow: inset 3px 3px 10px rgba(0,0,0,0.02);
-		width:270px;
+		width:250px;
 		float:left;
 		height:200px;
 		overflow:hidden !important;
@@ -35,13 +34,22 @@
 	
 	<!-- <div class=organisation-block> -->
 
-<h1>Listing organisations</h1>
+<h1 style="margin-top:20px;display:block;">Listing organisations</h1>
 <%= link_to 'New Organisation', new_organisation_path,:style => 'float:right;' %>
+
+
+<div class=raw>
+<% @organisations.each do |organisation| %>
+    <div class="unit-pic org-pic" style="background: url('<%= organisation.pic.url(:thumb) %>');width:60px;height:60px;"></div>
+
+<% end %>
+</div><br><br><br><br>
+
 
 <div class=raw>
 <% @organisations.each do |organisation| %>
 
-<%= stylesheet_link_tag "organisations", :media => 'screen,projection' %>
+
 
 <div class=unit>
     <div class="unit-pic org-pic" style="background: url('<%= organisation.pic.url(:thumb) %>');width:60px;height:60px;"></div>

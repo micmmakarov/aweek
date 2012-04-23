@@ -1,18 +1,21 @@
 <div class=links>
 	<div class=title>LINKS</div>
-		 
-		 <div class="linkimage">
-                <a href="#"><img src="images/thumbs/sidebar-thumb1.jpg" alt="" /></a>
-                <a href="#"><img src="images/thumbs/sidebar-thumb2.jpg" alt="" /></a>
-                <a href="#"><img src="images/thumbs/sidebar-thumb3.jpg" alt="" /></a>
-                <a href="#"><img src="images/thumbs/sidebar-thumb4.jpg" alt="" /></a>
-                <a href="#"><img src="images/thumbs/sidebar-thumb5.jpg" alt="" /></a>
-            </div>
-
-	<div class="united-links">
-	<div class=title>LINK-WORDS</div>
 		<div class=content>
-		</div>	
-	</div>
-	
+			
+			<% first_time = 0 %>
+			
+			<% @attachments.each_with_index do |attachment, i| %>
+				
+				<% break if i == 5 %>
+				<a class=event href="<%= url_for attachment.post %>">
+					
+							<div class=thumb-pic style="background:url('<%= attachment.pic.url(:thumb) %>');">&nbsp;</div>
+					
+				</a>
+			
+			<% end %>
+			
+			Read more ..
+		</div>
+
 	</div>
