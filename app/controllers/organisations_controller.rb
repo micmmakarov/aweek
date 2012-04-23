@@ -47,7 +47,8 @@ class OrganisationsController < ApplicationController
   # POST /organisations.json
   def create
     @organisation = Organisation.new(params[:organisation])
-
+	@organisation.user_id = current_user.id
+	
     respond_to do |format|
       if @organisation.save
         format.html { redirect_to @organisation, notice: 'Organisation was successfully created.' }

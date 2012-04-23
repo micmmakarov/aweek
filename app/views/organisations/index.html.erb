@@ -7,30 +7,51 @@
 		</div>
 	</div>
 	
-	<div class=body>
+	<style>
+		 .unit {
+		border-radius:5px;
+		box-shadow: 3px 3px 10px rgba(0,0,0,0.02);
+		box-shadow: inset 3px 3px 10px rgba(0,0,0,0.02);
+		width:270px;
+		float:left;
+		height:200px;
+		overflow:hidden !important;
+		padding:10px !important;
+		margin:5px !important;
+		background: rgba(0,0,0,.01);
+		border:none !important;
+		
+		}
+		.organisation-block {
+		overflow:hidden;
+		float:left;
+		}
+		.raw {
+		/*overflow:hidden;*/
+		width:100%;
+		margin-top:40px;
+		}
+	</style>
+	
+	<!-- <div class=organisation-block> -->
 
 <h1>Listing organisations</h1>
+<%= link_to 'New Organisation', new_organisation_path,:style => 'float:right;' %>
 
-
+<div class=raw>
 <% @organisations.each do |organisation| %>
 
 <%= stylesheet_link_tag "organisations", :media => 'screen,projection' %>
 
 <div class=unit>
     <div class="unit-pic org-pic" style="background: url('<%= organisation.pic.url(:thumb) %>');width:60px;height:60px;"></div>
-	<div class=rightpart>
-    <div class=name><%= organisation.name %> (<%= organisation.followers.length %>)</div>
-    <div class=alignright>
-	<div class=unit-user><%= organisation.user.name %></div>
-    <div class=city><%= organisation.city %></div>
-	</div>
+	<div class=name><a href="<%= url_for organisation %>"><%= organisation.name %> (<%= organisation.followers.length %>)<a/></div><div style="height:30px;"></div>
+	<div class=city><%= organisation.city %></div>
+	
+
 	<div class=clear></div>
-    <div class=unit-address><%= organisation.address %></div>
-    <div class=unit-contact><%= organisation.contacts %></div>
-	</div>
-	<div class=clear></div>
-    <div class=unit-description><%= organisation.description %></div>
-    <div><%= link_to 'Show', organisation %></div>
+    <div class=unit-description><%= organisation.description.slice(0..200) %>...</div>
+    <div></div>
 
 	<% if user_signed_in? then %>
 		<% if current_user.role==17 then %>
@@ -42,10 +63,10 @@
 </div>
 
 <% end %>
+<!--</div>-->
 
 
 
 
-<%= link_to 'New Organisation', new_organisation_path %>
 
 </div>
