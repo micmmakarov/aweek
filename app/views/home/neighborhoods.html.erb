@@ -1,2 +1,114 @@
-<iframe width="100%" height="750" src="http://maps.stamen.com/watercolor/embed#14/37.7807/-122.4237"></iframe>
 <!-- <iframe width="100%" height="750" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=San+Francisco,+CA&amp;aq=0&amp;oq=san+francisco&amp;sll=37.0625,-95.677068&amp;sspn=57.379893,135.263672&amp;ie=UTF8&amp;hq=&amp;hnear=San+Francisco,+California&amp;t=m&amp;z=12&amp;ll=37.77493,-122.419416&amp;output=embed"></iframe> -->
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&region=us"></script>
+
+  
+  
+  
+  	<style>
+		.map_container {
+			width: 100%;
+			min-height:700px;	
+		}
+		#map_canvas_cont, #pano_cont {
+			float: left;
+			width: 100%;
+			height: 700px;
+			margin: 20px;
+		}
+
+		#pano, #map_canvas {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<div class="map_container">
+			<div id="map_canvas_cont">
+				<div id="map_canvas"></div>
+			</div>
+		</div>	 
+  
+  
+  
+  
+  <script>
+$(document).ready(function() {		
+
+				load_map_and_street_view_from_address("<%= @organisations.first.address %>");
+
+				
+				
+		});
+</script>
+
+
+<script>
+
+		var panorama;
+		var addLatLng;
+		var showPanoData;
+		var panorama;
+
+		function load_map_and_street_view_from_address(address) {	    
+		   // Check if GPS has been locally cached.		   		   
+			var geocoder = new google.maps.Geocoder();
+			console.log("new geocoder");
+			geocoder.geocode( { 'address': address}, function(results, status) {
+			    if (status == google.maps.GeocoderStatus.OK) {
+
+					var gps = results[0].geometry.location;	
+					create_map_and_streetview(gps.lat(), gps.lng(), 'map_canvas', 'pano');
+			    }
+			});
+		}
+		
+		function  create_map_and_streetview(lat, lng, map_id, street_view_id) {
+
+			addLatLng = new google.maps.LatLng(lat,lng);
+			var service = new google.maps.StreetViewService();
+			
+			var styleArray = [
+  {
+    featureType: "all",
+    stylers: [
+  { saturation: 20 }
+    ]
+  },{
+    featureType: "road.arterial",
+    elementType: "geometry",
+    stylers: [
+      { hue: "#FF0000" },
+      { saturation: 50 }
+    ]
+  },{
+    featureType: "poi.business",
+    elementType: "labels",
+    stylers: [
+      { visibility: "on" }
+    ]
+  }
+];
+
+		    var myOptions = {
+				zoom: 14,
+				center: addLatLng,
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				backgroundColor: 'transparent',
+				streetViewControl: false,
+				keyboardShortcuts: false
+		    }
+		    console.log("Create map marker")
+		    var map = new google.maps.Map(document.getElementById(map_id), myOptions);
+			map.setOptions({styles: styleArray});
+			var marker = new google.maps.Marker({
+					map:map,
+					animation: google.maps.Animation.DROP,
+					position: addLatLng,
+					title: "Hi!"
+			});
+			
+			console.log("Create map marker 2")
+  		}
+
+  			    	
+		
+	</script>	

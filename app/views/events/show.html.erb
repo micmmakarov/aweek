@@ -1,35 +1,122 @@
-<p id="notice"><%= notice %></p>
+   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&region=us"></script>
 
-<p>
-  <b>Title:</b>
-  <%= @event.title %>
-</p>
+   
+<div class=slideshow2>
 
-<p>
-  <b>Content:</b>
-  <%= @event.content %>
-</p>
+<div class=left160 > &nbsp;
+</div>
 
-<p>
-  <b>Date:</b>
-  <%= @event.date %>
-</p>
+ <div class=body>
+ 
+	<% @event.attachments.each do |attachment| %>
+		<%= image_tag attachment.pic.url(:medium) %>
+	<% end %>
+    	
+    </div>
+	<div class=events>
+	<style>
+		.map_container {
+			width: 800px;
+			min-height:300px;	
+		}
+		#map_canvas_cont, #pano_cont {
+			float: left;
+			width: 200px;
+			height: 200px;
+			margin: 20px;
+		}
 
-<p>
-  <b>User:</b>
-  <%= @event.user_id %>
-</p>
+		#pano, #map_canvas {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<div class="map_container">
+			<div id="map_canvas_cont">
+				<div id="map_canvas"></div>
+			</div>
+			<div id="pano_cont">
+				<div id="pano"></div>
+			</div>
+		</div>	 
 
-<p>
-  <b>Organisation:</b>
-  <%= @event.organisation_id %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @event.address %>
-</p>
+</div>
 
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+</div>
+
+<%= render "organisations/js" %>
+<script>
+$(document).ready(function() {		
+
+				load_map_and_street_view_from_address("<%= @event.address %>");
+
+		});
+</script>						
+						
+<style>
+.body {
+color:#666;
+}
+.body .info {
+padding-top: 20px;
+line-height:160%;
+}
+.body .info i {
+color: #399;
+font-family: 'Open Sans', sans-serif;
+width:150px;
+display:inline-block;
+}
+</style>						
+						
+<!-- POST BODY -->
+<div class="main wrap">
+	
+	<div class=left-menu>
+	<div class=title>ORGANIZATION</div>
+		<div class=content>
+			<%= @event.organisation.name %>
+			<br><br>
+			Join Organization			
+		</div>
+	<div class=title>COMMENTS</div>
+	<div class=title>THIRD LINK</div>
+	<div class=title>LINK OF FORTH</div>
+
+	</div>
+	
+	<div class=body>
+	<div class=post>
+	<p id="notice"><%= notice %></p>
+	
+	<div class=post-title> <%= @event.title %></div>
+	<div class=info>
+		<i>Organisation:</i> <%= @event.organisation.name %><br>
+		<i>Address:</i> <%= @event.address %><br>
+		<i>Date:</i> <%= @event.date.strftime("%B %d") %><br>
+		<i>Time:</i> <%= @event.date.strftime("%I:%M %p") %>
+	</div>
+	<div class=post-description>
+	<% if @event.user_id!=0 then %>
+	Posted by <%= @event.user.name %>
+	<% end %> - <%= @event.created_at.strftime("%B %d, %Y") %></div>
+	<div class=post-content><%= @event.content %></div>
+	</div>
+	
+
+	
+
+
+
+<%= link_to 'Edit', edit_post_path(@event) %> |
+<%= link_to 'Back', posts_path %>
+
+</div>
+
+	<%= render 'posts/share' %>
+	<%= render 'events/other_events' %>
+	
+
+
+</div>
