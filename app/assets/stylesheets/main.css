@@ -618,14 +618,11 @@ text-decoration:underline;
 	}
 	
 #featured li span {
-	width:161px;
+	width:100%;
 	height:63px;
-	background:url(/assets//assets/news-caption-bg.png) no-repeat top left;
 	position:absolute;
-	bottom:-73px;
 	display:block;
-	padding:5px 10px;
-	left:6px;
+	z-index:999;
 	text-align:left;
 	font-weight:600;
 	overflow:hidden;

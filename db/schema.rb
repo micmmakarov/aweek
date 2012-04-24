@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120422201361) do
+ActiveRecord::Schema.define(:version => 20120424190933) do
 
   create_table "attachments", :force => true do |t|
     t.integer  "post_id"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20120422201361) do
     t.datetime "updated_at"
     t.string   "city"
     t.integer  "category_id"
+    t.integer  "views"
   end
 
   create_table "organisations", :force => true do |t|
@@ -76,6 +77,7 @@ ActiveRecord::Schema.define(:version => 20120422201361) do
     t.integer  "category_id"
     t.boolean  "published"
     t.boolean  "featured"
+    t.integer  "views"
   end
 
   create_table "relationships", :force => true do |t|

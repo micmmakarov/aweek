@@ -6,5 +6,13 @@ class Post < ActiveRecord::Base
   has_many :attachments, :dependent => :destroy
   
   accepts_nested_attributes_for :attachments, :allow_destroy => true
+  
+
+  def viewed!
+	i = views.to_i + 1
+	self.views = i.to_i
+	self.save
+  end
+  
 end
   
