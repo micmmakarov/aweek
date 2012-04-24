@@ -22,7 +22,7 @@
 						
 						<% if post.attachments.length == 1 then %>
 							<% post.attachments.each do |attachment| %>
-								<%= image_tag attachment.pic.url(:medium) %>
+								<%= image_tag attachment.pic.url(:feed) %>
 							<% end %>
 						<% else %>
 							<% post.attachments.each do |attachment| %>
