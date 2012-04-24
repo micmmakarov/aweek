@@ -7,7 +7,7 @@
 			<% @attachments.each_with_index do |attachment, i| %>
 				
 				<% break if i == 5 %>
-				<a class=event href="<%= url_for attachment.post %>">
+				<a href="<%= url_for attachment.post %>">
 					
 							<div class=thumb-pic style="background:url('<%= attachment.pic.url(:thumb) %>');">&nbsp;</div>
 					

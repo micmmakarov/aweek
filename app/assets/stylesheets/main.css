@@ -539,12 +539,14 @@ background: #f3f3f3;
 color: #399;
 font-family: 'Open Sans', sans-serif;
 font-size: 11px;
+margin-bottom:5px;
 }
 .event-title {
 color: #666;
 font-family: 'Open Sans', sans-serif;
 font-size: 14px;
 line-height:120%;
+margin-bottom:5px;
 }
 .event-address, .event .time {
 color: #666;
@@ -941,6 +943,9 @@ background:none;
 .post-link,.post-link:active, .post-link:visited {
 color: #333333;
 text-decoration: none;
+font-weight:400;
+font-size:13px;
+line-height:16px;
 }
 .post-link:hover {
 color: #111111;
