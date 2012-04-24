@@ -21,7 +21,7 @@ AsianWeek::Application.routes.draw do
   get 'all' => 'home#index', :feed => 0
   get 'neighborhoods' => 'home#neighborhoods', :feed => 1
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
   resources :users
   
