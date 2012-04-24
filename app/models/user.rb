@@ -20,8 +20,13 @@ class User < ActiveRecord::Base
   end
 
   def unfollow_organisation!(organisation)
-    relationships.destroy!(organisation_id: organisation.id)
+	puts relationships.find_by_organisation_id(organisation.id).organisation_id
+    relationships.find_by_organisation_id(organisation.id).destroy
   end
-
+	
+  def flw(organisation)
+	@r = Relationship.where("follower_id = :follower AND organisation_id = :org", :follower => id, :org => organisation.id).first
+	"Hi" if @r 
+  end
   
 end

@@ -1,1 +1,2 @@
-$(".follow").html("<%= escape_javascript(render('organisations/follow')) %>")
+$(".follow_<%= @organisation.id %>").html("<%= escape_javascript(render('organisations/follow')) %>")
+$(".links").replaceWith("<%= escape_javascript(render('organisations/followers')) %>")

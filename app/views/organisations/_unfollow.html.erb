@@ -1,6 +1,5 @@
- 	<% if user_signed_in? then %>
 <%= form_for(current_user.relationships.find_by_organisation_id(@organisation),
-             html: { method: :delete },
-             remote: true, class: 'follow') do |f| %>
+             html: { method: :delete }, class: 'follow',
+             remote: true) do |f| %>
   <%= f.submit "Unfollow", class: "btn-unfollow" %>
-<% end %><% end %>
+<% end %>

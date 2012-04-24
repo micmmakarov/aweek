@@ -52,6 +52,7 @@
 
 
 <div class=unit>
+
     <div class="unit-pic org-pic" style="background: url('<%= organisation.pic.url(:thumb) %>');width:60px;height:60px;"></div>
 	<div class=name><a href="<%= url_for organisation %>"><%= organisation.name %> (<%= organisation.followers.length %>)<a/></div><div style="height:30px;"></div>
 	<div class=city><%= organisation.city %></div>
@@ -60,13 +61,33 @@
 	<div class=clear></div>
     <div class=unit-description><%= organisation.description.slice(0..200) %>...</div>
     <div></div>
-
+	
 	<% if user_signed_in? then %>
-		<% if current_user.role==17 then %>
+	
+	<div class="follow_<%= organisation.id %>">
+		
+		<% if current_user.flw(organisation) then %>
+			
+			<% @organisation = organisation %>
+			<%= render "unfollow" %>
+			
+			
+		<% else %>
+
+			<% @organisation = organisation %>
+			<%= render "follow" %>
+
+		
+		<% end %>
+	</div>
+
+	<% if current_user.role==17 then %>
 			<div><%= link_to 'Edit', edit_organisation_path(organisation) %>
 			<%= link_to 'Destroy', organisation, confirm: 'Are you sure?', method: :delete %></div>
 		<% end %>
 	<% end %>
+	
+	
 	
 </div>
 

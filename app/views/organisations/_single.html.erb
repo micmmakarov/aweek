@@ -35,7 +35,25 @@
 			<%= link_to 'Destroy', organisation, confirm: 'Are you sure?', method: :delete %></div>
 		<% end %>
 	<% end %>
-	<%= render 'organisations/follow' %>
+		
+		<% if user_signed_in? then %>
+			
+			<div class="follow_<%= @organisation.id %>">
+			
+			<% if current_user.flw(@organisation) then %>
+
+				<%= render 'organisations/unfollow' %>
+			
+			<% else %>
+
+				<%= render 'organisations/follow' %>
+			
+			<% end %>
+			
+			</div>
+			
+			
+		<% end %>
 </div>
 
 

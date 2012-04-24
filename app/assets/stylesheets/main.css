@@ -9,23 +9,32 @@ font-family: 'Maven Pro', sans-serif;
 
 */
 .btn-follow {
+background:none;
 border:0px;
 padding:5px 20px;
 border-radius:10px;
-font-size:20px;
+font-size:16px;
 margin:5px;
 color:darkorange;
 cursor:pointer;
 }
 
 .btn-unfollow {
+
+background:none;
 padding:5px 20px;
 border-radius:10px;
-font-size:20px;
+font-size:16px;
 margin:5px;
 color:red;
 cursor:pointer;
+box-shadow:none;
+border:none;
+outline:none;
+}
 
+.btn-follow:hover, .btn-unfollow:hover {
+text-decoration: underline;
 }
 
 .org-pic {

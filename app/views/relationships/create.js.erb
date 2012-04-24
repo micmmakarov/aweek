@@ -1,2 +1,2 @@
-$(".new_relationship").html("<%= escape_javascript(render('organisations/unfollow')) %>")
+$(".follow_<%= @organisation.id %>").html("<%= escape_javascript(render('organisations/unfollow')) %>")
 $(".links").replaceWith("<%= escape_javascript(render('organisations/followers')) %>")
