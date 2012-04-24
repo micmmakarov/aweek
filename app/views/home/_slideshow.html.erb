@@ -68,22 +68,41 @@ border-bottom-right-radius:20px;
  
 		<ul id="items">
 		<% @randoms.each do |attachment| %>
-        	<li>
-                <a class=slide-pic2 href="#"><div class=slide-pic style="background:url('<%= attachment.pic.url(:slide) %>');">
-				<span><strong>
-				<% if attachment.post then %>
-				<%= attachment.post.title.slice(0..30) %>...
-				<% else %>
-					no views yet
-				<% end %> 
+
+		<% if attachment.post then %>
+			<% url = url_for attachment.post %>
+			<% views = attachment.post.views %>
+			<% title = attachment.post.title.slice(0..30) %>
+			<% background = "background:rgba(180,16,32,0.9);" %>
+		<% end %>
+		<% if attachment.event then %>
+			<% url = url_for attachment.event %>
+			<% views = attachment.event.views %>
+			<% title = attachment.event.title.slice(0..30) %>
+			<% background = "background:rgba(180,103,0,0.9);" %>
+		<% end %>
+		
+		<% if views then %>
+		
+			<% views = views.to_s + " views" %>
+		
+		<% else %>
+		
+			<% views = "No views yet" %>
+		
+		<% end %>
+		
+			<li>
+                <a class=slide-pic2 href="<%= url %>"><div class=slide-pic style="background:url('<%= attachment.pic.url(:slide) %>');">
+				<span style="<%= background %>"><strong>
+				
+				<%= title %>...
 				
 				</strong><em>
 				
-				<% if attachment.post then %>
-					<%= attachment.post.views %> views
-				<% else %>
-					no views yet
-				<% end %> 
+
+					<%= views %>
+
 				</em><div class="likes">15 likes</div></span>
 				</div>
                 
