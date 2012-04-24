@@ -6,6 +6,7 @@ class HomeController < ApplicationController
     @events = Event.all(:order => "created_at DESC")
     @organisations = Organisation.all 
 	@attachments = Attachment.all
+	@categories = Category.all
 	@randoms = Attachment.all(:order => "RANDOM()", :limit => 20)
   end
   

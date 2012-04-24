@@ -1,0 +1,54 @@
+<style>
+.categories {
+width:100%;
+overflow:hidden;
+display:none;
+}
+.categories ul li {
+float:left;
+padding:10px 20px;
+}
+.categories a {
+text-decoration:none;
+color:#399;
+}
+.categories a:hover {
+text-decoration:underline;
+color:red;
+}
+</style>
+<script>
+$(document).ready(function () {
+
+$(".news-button").hover(function () {
+$(".categories").show();
+$(".categories").stop().animate({height: '40px'});
+}, function () {
+$(".categories").stop().animate({height: '0'});
+//$(".categories").hide();
+});
+$(".categories").hover(function () {
+$(".categories").stop().animate({height: '40px'});
+}, function () {
+$(".categories").stop().animate({height: '0'});
+});
+
+
+});
+</script>
+
+<div class=categories>
+<ul>
+<li>Categories: </li>
+<% all_categories.each do |category| %>
+<li>
+	
+	<a href='<%= url_for(category) %>'>
+								<%= category.name %>
+						</a>
+	
+</li>
+
+<% end %>
+</ul>
+</div>
