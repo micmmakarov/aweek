@@ -12,10 +12,14 @@ AsianWeek::Application.routes.draw do
 
   resources :events
 
-  resources :posts
+  resources :posts do
+	match :publish
+  end
 
   get "home/index"
   get 'profile' => 'users#profile'
+  match 'publishpost' => 'posts#publish'
+  match 'featurepost' => 'posts#feature'
   get 'calendar' => 'events#calendar'
   get 'feed' => 'home#index', :feed => 1
   get 'all' => 'home#index', :feed => 0

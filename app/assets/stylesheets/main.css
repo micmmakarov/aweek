@@ -8,6 +8,13 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Maven Pro', sans-serif;
 
 */
+
+.featured {
+float:right;
+color:red;
+/* display:block; */
+}
+
 .btn-follow {
 background:none;
 border:0px;

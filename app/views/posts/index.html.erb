@@ -1,5 +1,10 @@
 <h1>Listing posts</h1>
 
+
+<%= render 'posts/posts' %>
+
+<!--
+
 <table>
   <tr>
     <th>Title</th>
@@ -10,7 +15,6 @@
     <th></th>
     <th></th>
   </tr>
-
 <% @posts.each do |post| %>
   <tr>
     <td><%= post.title %></td>
@@ -22,7 +26,7 @@
     <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
-</table>
+</table> -->
 
 <br />
 

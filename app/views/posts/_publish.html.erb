@@ -1,0 +1,12 @@
+<div class="publish_<%= @post.id %>">
+<% if @post.published then %>
+	<% text = "Unpublish!" %>
+<% else %>
+	<% text = "Publish!" %>
+<% end %>
+<%= form_for(@post, :url => { :action => "publish", :id => @post.id },
+             html: { method: :post }, class: 'follow',
+             remote: true) do |f| %>
+  <%= f.submit text, class: "btn-unfollow" %>
+<% end %>
+</div>

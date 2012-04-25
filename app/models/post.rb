@@ -14,5 +14,25 @@ class Post < ActiveRecord::Base
 	self.save
   end
   
+  def feature!
+	self.featured = true
+	self.save
+  end
+  def unfeature!
+	self.featured = false
+	self.save
+  end
+  def publish!
+	self.published = true
+	self.save
+  end
+  def unpublish!
+	self.published = false
+	self.save
+  end
+  
+
+  
+  
 end
   

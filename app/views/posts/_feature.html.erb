@@ -1,0 +1,12 @@
+<div class="feature_<%= @post.id %>">
+<% if @post.featured then %>
+	<% text = "Unfeature!" %>
+<% else %>
+	<% text = "Feature!" %>
+<% end %>
+<%= form_for(@post, :url => { :action => "feature", :id => @post.id },
+             html: { method: :post }, class: 'follow',
+             remote: true) do |f| %>
+  <%= f.submit text, class: "btn-unfollow" %>
+<% end %>
+</div>

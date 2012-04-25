@@ -97,4 +97,33 @@ class PostsController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  def publish
+	@post = Post.find(params[:id])
+	if @post.published then
+		@post.unpublish!	
+	else
+		@post.publish!	
+	end
+	respond_to do |format|
+      format.html { head :ok }
+      format.js { render "posts/publish.js" }
+    end
+  end
+  
+  def feature
+	@post = Post.find(params[:id])
+	if @post.featured then
+		@post.unfeature!	
+	else
+		@post.feature!	
+	end
+	respond_to do |format|
+      format.html { head :ok }
+      format.js { render "posts/feature.js" }
+    end
+
+  end  
+  
+  
 end
