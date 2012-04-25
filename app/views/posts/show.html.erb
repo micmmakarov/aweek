@@ -9,7 +9,7 @@ Views: <%= @post.views %>
  <div id="featured">
  
 	<% @post.attachments.each do |attachment| %>
-		<%= image_tag attachment.pic.url(:medium) %>
+		<%= image_tag(attachment.pic.url(:medium), :class => 'big-img') %>
 	<% end %>
     	<!--
 		<ul id="items">
