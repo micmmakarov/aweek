@@ -1,26 +1,26 @@
 <div class=left-menu>
+<p>
+  <b>Category:</b>
+  <%= @category.name %>
+</p>
 	<div class=title>YOUR NEWS FEED</div>
 		<div class=content>
 		</div>
 	</div>
 	<div class=body>
+		<p id="notice"><%= notice %></p>
 		<%= render 'home/posts' %>
 	</div>
-		<% #render 'home/events' %>
+		<% render 'home/events' %>
 
-
-		<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @category.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @category.description %>
-</p>
 
 		
+
+
+
+
+
+<% if 1==2 then %>		
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
+<% end %>
