@@ -827,6 +827,12 @@ width:100px !important;
 float:left;
 }
 
+
+.links {
+float:left;
+}
+
+
 .main {
 background: url('/assets/bg_1500.png') repeat-y;
 background-position: -200px top;
@@ -879,6 +885,19 @@ background:white;
 }
 
 @media only screen and (max-width: 480px) { 
+
+.events, .links {
+width:40% !important;
+margin:0;
+overflow:hidden;
+padding: 10px 10px;
+}
+.thumb-pic {
+border-radius:none !important;
+}
+.events .title, .links .title {
+text-align:center;
+}
 
 .desc  {
 margin-left:0px !important;

@@ -10,7 +10,7 @@
 					
 					<% if first_time==0 then %>
 						<% event.attachments.each do |attachment| %>
-							<div class=thumb-pic style="background:url('<%= attachment.pic.url(:thumb) %>');">.</div>
+							<div class="thumb-pic" style="background:url('<%= attachment.pic.url(:thumb) %>');">.</div>
 							<% first_time = 1 %>
 							<% break %>
 						<% end %>
