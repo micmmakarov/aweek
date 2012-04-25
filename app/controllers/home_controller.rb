@@ -19,8 +19,8 @@ class HomeController < ApplicationController
   end
   
   def thumbs
-	attachments = Attachment.All
-	Attachments.each do |attachment|
+	attachments = Attachment.all
+	attachments.each do |attachment|
 		puts "!!!"
 		puts "!!!"
 		puts "!!!"
