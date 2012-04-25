@@ -28,7 +28,7 @@
 						
 						<% if post.attachments.length == 1 then %>
 							<% post.attachments.each do |attachment| %>
-								<%= image_tag attachment.pic.url(:feed) %>
+								<%= image_tag attachment.pic.url(:feed), :class => 'big-img' %>
 							<% end %>
 						<% else %>
 							<% post.attachments.each do |attachment| %>
