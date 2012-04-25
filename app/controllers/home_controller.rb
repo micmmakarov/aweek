@@ -18,4 +18,16 @@ class HomeController < ApplicationController
   def profile
   end
   
+  def thumbs
+	attachments = Attachment.All
+	Attachments.each do |attachment|
+		puts "!!!"
+		puts "!!!"
+		puts "!!!"
+		puts "Regeneration pics for " + attachment.id.to_s	
+		attachment.pic.reprocess!
+	end
+	render text: "OK!"
+  end
+  
   end

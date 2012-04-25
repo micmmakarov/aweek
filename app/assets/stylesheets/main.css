@@ -638,7 +638,7 @@ text-decoration:underline;
 #featured li span strong {
 	font-size:15px;
 	color:#fff;
-	text-shadow:1px 1px 2px #000;
+	/* text-shadow:1px 1px 2px #000; */
 	font-weight:normal;
 	display:block;
 	margin-bottom:7px;
