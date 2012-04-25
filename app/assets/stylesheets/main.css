@@ -650,7 +650,7 @@ text-decoration:underline;
 	color:#46040a;
 	font-size:13px;
 	float:left;
-	text-shadow:1px 1px 1px #cd1829;
+	/* text-shadow:1px 1px 1px #cd1829; */
 	}
 	
 #featured li span .likes {
@@ -837,6 +837,7 @@ min-width:100%;
 display:none;
 }
 
+
 .main {
 background: none;
 overflow:hidden;
@@ -859,11 +860,39 @@ padding-top:14px;
 
 }
 
+
 @media only screen and (max-width: 480px) { 
+
+.desc  {
+margin-left:0px !important;
+}
+.desc a {
+text-decoration:none !important;
+}
+
+.postcontent {
+overflow:hidden;
+}
+.postmetadata {
+padding-bottom:0px;
+margin-bottom:0px;
+}
+.category {
+display:none;
+}
+
 .big-img {
 width:100%;
 height:auto;
 }
+.small-img {
+width:49%;
+height:auto;
+}
+.org-pic {
+margin:10px;
+}
+
 .hide-left, .hide-right {
 display:none;
 }

@@ -26,13 +26,14 @@
 							</a>
                         </div>
 						
+						
 						<% if post.attachments.length == 1 then %>
 							<% post.attachments.each do |attachment| %>
 								<%= image_tag attachment.pic.url(:feed), :class => 'big-img' %>
 							<% end %>
 						<% else %>
 							<% post.attachments.each do |attachment| %>
-								<%= image_tag attachment.pic.url(:thumb) %>
+								<%= image_tag attachment.pic.url(:thumb), :class => 'small-img' %>
 							<% end %>
 						<% end %>
 

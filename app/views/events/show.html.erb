@@ -9,7 +9,7 @@
  <div class=body>
  
 	<% @event.attachments.each do |attachment| %>
-		<%= image_tag attachment.pic.url(:medium) %>
+		<%= image_tag attachment.pic.url(:medium), :class => 'big-img'  %>
 	<% end %>
     	
     </div>
