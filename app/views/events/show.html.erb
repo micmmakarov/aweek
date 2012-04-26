@@ -106,12 +106,15 @@ display:inline-block;
 	
 
 	
+<div class=comments>
+	<%= render "shared/comments" %>
+</div>
 
-
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
-
+<% if 1==2 then %>
+	<%= link_to 'Edit', edit_event_path(@event) %> |
+	<%= link_to 'Back', events_path %>
+<% end %>
+	
 </div>
 
 	<%= render 'posts/share' %>
