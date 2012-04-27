@@ -114,7 +114,7 @@ top:-550px;
 background:rgba(240,240,240,0.97);
 z-index:100;
 box-shadow:2px 2px 3px lightgray;
--webkit-box-box-shadow:2px 2px 3px lightgray;
+-webkit-box-shadow:2px 2px 3px lightgray;
 
 padding-top:30px;
 overflow:hidden;
@@ -407,7 +407,7 @@ background: url(/assets/menu-panel.png);
 height:44px;
 width:100%;
 box-shadow: 1px 1px 5px #EEEEEE;
--webkit-box-box-shadow: 1px 1px 5px #EEEEEE;
+-webkit-box-shadow: 1px 1px 5px #EEEEEE;
 
 z-index:220;
 }
@@ -415,7 +415,7 @@ z-index:220;
 .menu-panel a {
 color:#023a44;
 text-shadow: 1px 1px white;
--webkit-box-box-shadow: 1px 1px white;
+-webkit-box-shadow: 1px 1px white;
 
 font-family: 'Maven Pro', sans-serif;
 font-weight:bold;
@@ -453,7 +453,7 @@ border-radius:50px;
 height:300px;
 width:100%;
 box-shadow: 5px 5px 10px lightgray;
--webkit-box-box-shadow: 5px 5px 10px lightgray;
+-webkit-box-shadow: 5px 5px 10px lightgray;
 overflow:hidden;
 position:relative;
 }
@@ -461,7 +461,7 @@ position:relative;
 min-height:100px;
 width:100%;
 box-shadow: 5px 5px 10px lightgray;
--webkit-box-box-shadow: 5px 5px 10px lightgray;
+-webkit-box-shadow: 5px 5px 10px lightgray;
 overflow:hidden;
 position:relative;
 padding-top:10px;
@@ -812,7 +812,7 @@ padding:0px;
 min-height:70px;
 max-height:70px;
 /* box-shadow: 0px 5px 10px rgba(0,0,0,0.05);
--webkit-box-box-shadow: 0px 5px 10px rgba(0,0,0,0.05); */
+-webkit-box-shadow: 0px 5px 10px rgba(0,0,0,0.05); */
 overflow:hidden;
 background:white;
 }
