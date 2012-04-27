@@ -15,6 +15,11 @@ AsianWeek::Application.routes.draw do
   resources :posts do
 	match :publish
   end
+  
+    devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" } do
+	 get "/users/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
+  end
+  
   resources :users do
 	match :approve
   end
@@ -39,7 +44,7 @@ AsianWeek::Application.routes.draw do
 
   
   
-  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+
   	
   
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
