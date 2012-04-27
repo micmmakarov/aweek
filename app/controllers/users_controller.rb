@@ -98,6 +98,10 @@ class UsersController < ApplicationController
   def profile
 	@contributors = current_user.followeds
 	@organisations = current_user.organisations
+	puts "!!!"
+	puts "!!!"
+	puts "!!!"
+	puts @organisations.count
   end
 
 end
