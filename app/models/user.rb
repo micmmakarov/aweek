@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
   
   
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
-  has_many :organisations, :through => :relationships, class_name: "Organisation", :source => :organisation
+  has_many :organisations, :through => :relationships, class_name: "Organisation", :source => :organisation, foreign_key: "follower_id"
   has_many :followeds, :through => :relationships, class_name: "User", :source => :followed, foreign_key: "follower_id"
   
   

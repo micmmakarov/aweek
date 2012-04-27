@@ -97,6 +97,7 @@ class UsersController < ApplicationController
   
   def profile
 	@contributors = current_user.followeds
+	@organisations = current_user.organisations
   end
 
 end

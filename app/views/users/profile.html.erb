@@ -23,7 +23,7 @@
 
 <h1>You are following next organisations:</h1>
 
-<% current_user.organisations.each do |organisation| %>
+<% @organisations.each do |organisation| %>
 	
 		<div class=unit>
     <div class="unit-pic org-pic" style="background: url('<%= organisation.pic.url(:thumb) %>');width:60px;height:60px;"></div>
