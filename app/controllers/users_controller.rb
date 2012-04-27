@@ -80,4 +80,14 @@ class UsersController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+  def approve
+	@user = User.find(params[:id])
+	@user.approve_contributor
+	
+    respond_to do |format|
+      format.html { redirect_to User }
+      format.js { render text: 'ok'}
+    end
+  end
 end

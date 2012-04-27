@@ -17,6 +17,10 @@ gem 'aws-sdk'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'rails_admin'
+gem 'hpricot'
+gem 'simple-rss'
+gem 'pry'
+gem 'nokogiri'
 
 # Gems used only for assets and not required
 # in production environments by default.

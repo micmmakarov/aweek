@@ -16,6 +16,10 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
 	@posts = @category.posts
 	@events = @category.events
+	puts "###"
+	puts "###"
+	puts "###"
+	puts @events.count
 	
     respond_to do |format|
       format.html # show.html.erb

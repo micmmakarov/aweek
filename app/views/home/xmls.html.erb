@@ -1,0 +1,118 @@
+<style>
+.rss {
+font-size:14px;
+font-family: 'Maven Pro', sans-serif;
+padding-bottom:5px;
+margin-bottom: 5px;
+border-bottom: 1px solid #399;
+background:white;
+}
+
+.rss-left {
+float:left;
+overflow:hidden;
+width:500px;
+}
+.rss-veryleft {
+float:left;
+overflow:hidden;
+width:50px;
+}
+
+.rss .name {
+font-family: 'Maven Pro', sans-serif;
+font-weight:bold;
+font-size:16px;
+}
+.cat {
+color: #399;
+cursor:pointer;
+}
+
+</style>
+<script>
+$(document).ready(function () {
+
+$(".cat").click(function () {
+n = $(this).attr("data-link");
+$(".rss").hide();
+$("." + n).fadeIn();
+});
+
+});
+</script>
+
+<h1> <%= @rss.search('channel title').first.inner_text %> </h1>
+
+Categories:
+<span class=cat data-link="rss">ALL FEED</span> / 
+<% @xml_categories.each do |i| %>
+	<span class=cat data-link="<%= i.tr(' ','_').tr('.','_').tr('&','_') %>"><%= i %></span> / 
+<% end %>
+
+<% @rss.xpath('//item').each do |i| %>
+
+	<div class="rss <%  i.search('category').each do |c| %>
+		<%= c.inner_text.tr(' ','_').tr('.','_').tr('&','_') %>
+		<% end %>">
+		<div class=rss-veryleft>
+		Write Post!
+		</div>
+			<div class=rss-left>
+
+		<div class=name><%= i.search('title').inner_text %></div>
+		<div><%=  i.search('link').inner_text %></div>
+		<div><%=  i.search('pubDate').inner_text %>
+		<%  i.search('category').each do |c| %>
+		<span class=cat data-link="<%= c.inner_text.tr(' ','_') %>"><%= c.inner_text %></span> / 
+		<% end %>
+		</div>
+		<div></div>
+
+	</div>
+	<div class=rss-left>
+			<%  n = 0
+			i.inner_html.split('src="').map { |p|
+				n += 1
+				unless (p =~ URI::regexp).nil?
+					p.split('"')[0] if n%2 == 0 
+				end
+				
+				}.flatten.each do |p| %>
+
+					<img height="50" src="<%= p %>" />
+					
+				
+					
+					
+				<% end %>
+				
+						<%  n = 0
+			i.inner_html.split('url="').map { |p|
+				n += 1
+				unless (p =~ URI::regexp).nil?
+					p.split('"')[0] if n%2 == 0 
+				end
+				
+				}.flatten.each do |p| %>
+
+
+					<img height="50" src="<%= p %>" />
+					
+				
+					
+					
+				<% end %>
+	
+				
+				
+				<% i.search('img').each do |n| %>
+					<img src="http://<%= n.to_s.split('http://')[1].split('"')[0] %>">
+				<% end %>
+			
+		
+		</div>
+		
+		<div class=clear></div>
+	</div>
+<% end %>

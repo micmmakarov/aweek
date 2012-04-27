@@ -16,6 +16,17 @@
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+	<td>
+	<div class="approve_<%= user.id %>">
+	<% @user = user
+		url= "/approve/" +  @user.id.to_s	%>
+	<%= form_for(@user, :url => url,
+             html: { method: :post }, class: 'approve',
+             remote: true) do |f| %>
+  <%= f.submit 'approve as a contributor', class: "Contributor" %>
+<% end %>
+</div>
+</td>
   </tr>
 <% end %>
 </table>

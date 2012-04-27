@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120424190933) do
+ActiveRecord::Schema.define(:version => 20120426202517) do
 
   create_table "attachments", :force => true do |t|
     t.integer  "post_id"
@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(:version => 20120424190933) do
     t.string   "city"
     t.integer  "category_id"
     t.integer  "views"
+    t.boolean  "featured"
+    t.boolean  "published"
   end
 
   create_table "organisations", :force => true do |t|
@@ -105,6 +107,10 @@ ActiveRecord::Schema.define(:version => 20120424190933) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "city"
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

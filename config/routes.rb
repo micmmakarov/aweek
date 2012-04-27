@@ -15,20 +15,32 @@ AsianWeek::Application.routes.draw do
   resources :posts do
 	match :publish
   end
+  resources :users do
+	match :approve
+  end
 
+	
   get "home/index"
   get 'profile' => 'users#profile'
   match 'publishpost' => 'posts#publish'
   match 'featurepost' => 'posts#feature'
   get 'calendar' => 'events#calendar'
   get 'feed' => 'home#index', :feed => 1
+  get 'organizations_feed' => 'home#index', :feed => 1
   get 'all' => 'home#index', :feed => 0
   get 'neighborhoods' => 'home#neighborhoods', :feed => 1
   get 'regenerate_thumbnails' => 'home#thumbs'
+  get 'contributors' => 'home#contributors'
+
+  match 'rss' => 'home#xmls'
+  match 'rss/:feed' => 'home#xmls'
+
+  match 'approve/:id' => "users#approve"
+
+  
   
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
-
-  resources :users
+  	
   
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   

@@ -1,0 +1,64 @@
+<!-- FEED HERE! -->
+<style>
+.post {
+overflow:hidden;
+}
+.desc {
+padding-left:40px;
+}
+.desc li {
+line-height:140%;
+font-size:16px;
+font-family: 'Maven Pro', sans-serif;
+}
+.desc .name {
+font-size:20px;	
+font-family: 'Open Sans', sans-serif;
+}
+.desc li span {
+font-size:14px;
+font-family: 'Open Sans', sans-serif;
+}
+</style>
+			<div class="content">
+
+<% @contributors.each do |c| %>
+	
+                <!-- Post Start-->
+               
+                <div class="post clearfix">
+						<div class="unit-pic org-pic alignleft" style="background: url('<%= c.pic.url(:profile) %>');width:85px;height:110px;"></div>
+                    <ul class="desc">
+						<li class=name><%= c.name %></li>
+						<li class=city><%= c.city %></li>
+						<li><span>Joined: </span><%= c.created_at %></li>
+						<li><span>Organisations: </span>
+						<% if c.organisations then %>
+							<% c.organisations.each do |o| %>
+							<%= o.name %>
+							<% end %>
+						<% else %>
+							-
+						<% end %>
+						
+					    </li>
+					</ul>
+                
+                </div>
+     
+
+<% end %>
+             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
