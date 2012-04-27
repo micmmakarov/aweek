@@ -83,11 +83,15 @@ class UsersController < ApplicationController
   
   def approve
 	@user = User.find(params[:id])
-	@user.approve_contributor
+	if @user.role == 7 then
+		@user.disapprove_contributor
+	else
+		@user.approve_contributor
+	end
 	
     respond_to do |format|
       format.html { redirect_to User }
-      format.js { render text: 'ok'}
+      format.js { render "posts/publish.js" }
     end
   end
 end
