@@ -415,7 +415,7 @@ z-index:220;
 .menu-panel a {
 color:#023a44;
 text-shadow: 1px 1px white;
--webkit-box-shadow: 1px 1px white;
+-webkit-text-shadow: 1px 1px white;
 
 font-family: 'Maven Pro', sans-serif;
 font-weight:bold;
@@ -721,7 +721,7 @@ max-width:580px;
 min-width:580px; 
 padding-left:25px;
 padding-right:25px;
-border-right: 1px solid #EEEEEE;
+/* border-right: 1px solid #EEEEEE; */
 overflow:hidden;
 }
 .events {
@@ -783,8 +783,8 @@ margin-top:20px;
 max-width:508px;
 min-width:508px;
 */
-max-width:580px;
-min-width:580px;
+max-width:575px;
+min-width:575px;
 
 }
 
