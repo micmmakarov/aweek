@@ -21,8 +21,12 @@ class User < ActiveRecord::Base
   
   
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
-  has_many :organisations, :through => :relationships, class_name: "Organisation", :source => :organisation, foreign_key: "follower_id"
+  
+  has_many :organisations, :through => :relationships, class_name: "Organisation", :source => :organisation
+  
   has_many :followeds, :through => :relationships, class_name: "User", :source => :followed, foreign_key: "follower_id"
+
+  has_many :followers, :through => :relationships, class_name: "User", :source => :follower, :foreign_key => :followed
   
   
   def follow_organisation!(organisation)
@@ -90,12 +94,13 @@ class User < ActiveRecord::Base
 	id2post.values
   end
   
-  def organisations
-  list=self.posts.map { |p| 
+  def participating_organisations
+  list=posts.map { |p| 
 	p.organisation
 	}.flatten.uniq!
 
 	list
 	
   end
+  
 end
