@@ -96,12 +96,13 @@ class UsersController < ApplicationController
   end
   
   def profile
+		puts "!!!"
+	puts "!!!"
+	puts "!!!"
+	puts current_user.name
+
 	@contributors = current_user.followeds
 	@organisations = current_user.organisations
-	puts "!!!"
-	puts "!!!"
-	puts "!!!"
-	puts @organisations.count
   end
 
 end
