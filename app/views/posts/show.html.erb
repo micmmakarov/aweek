@@ -3,14 +3,15 @@
 
 	<style>
 	.theme-default #slider {
-    margin:100px auto 0 auto;
     width:500px; /* Make sure your images are the same size */
     height:400px; /* Make sure your images are the same size */
+	
 }
 
 	#slider .nivo-controlNav {
 	position:absolute;
-	bottom:-70px; /* Put the nav below the slider */
+	top:0px; /* Put the nav below the slider */
+	right:-140px;
 	z-index:9999;
 }
 #slider .nivo-controlNav img {
@@ -18,12 +19,23 @@
 	position:relative;
 	margin-right:10px;
 	z-index:9999;
-	width:50px;
+	width:100px;
 	height:auto;
+	margin-bottom:7px;
+	padding:2px;
+	
 }
+
+#slider .nivo-controlNav .active img {
+border: 1px solid darkorange;
+}
+
+
 .nivo-control {
 width:50px !important;
+float:none !important;
 }
+
 </style>
 
 <div class=slideshow2>
@@ -107,7 +119,7 @@ Views: <%= @post.views %>
 
     <script type="text/javascript">
     $(window).load(function() {
-        $('#slider').nivoSlider({controlNavThumbs:true});
+        $('#slider').nivoSlider({pauseTime:10000,controlNavThumbs:true});
     });
     </script>
 	

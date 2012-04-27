@@ -91,7 +91,7 @@ class UsersController < ApplicationController
 	
     respond_to do |format|
       format.html { redirect_to User }
-      format.js { render "posts/publish.js" }
+      format.js { render "users/approve.js" }
     end
   end
 end

@@ -73,10 +73,12 @@
 	cursor:pointer;
 }
 .nivo-prevNav {
-	left:0px;
+	left:-0px;
+	display:none;
 }
 .nivo-nextNav {
-	right:0px;
+	right:-0px;
+	display:none;
 }
 /* Control nav styles (e.g. 1,2,3...) */
 .nivo-controlNav a {
