@@ -866,17 +866,16 @@ overflow:hidden;
 @media only screen and (max-width: 768px) { 
 
 .main .body {
-width:100%;
-margin-left:0px;
-margin-right:0px;
+width:80%;
+margin-left:10%;
 padding-left:0px;
 padding-right:0px;
-max-width:100%;
-min-width:100%;
+max-width:80%;
+min-width:80%;
 }
 
 .control-panel {
-display:none;
+/*display:none;*/
 }
 
 
@@ -906,6 +905,18 @@ background:white;
 }
 
 @media only screen and (max-width: 480px) { 
+
+.main .body {
+width:100%;
+margin-left:0px;
+margin-right:0px;
+margin:auto;
+padding-left:0px;
+padding-right:0px;
+max-width:100%;
+min-width:100%;
+}
+
 
 .events, .links {
 width:40% !important;
