@@ -23,6 +23,7 @@
 
 <h1>You are following next organisations:</h1>
 
+<% if @organisations then %>
 <% @organisations.each do |organisation| %>
 	
 		<div class=unit>
@@ -45,6 +46,7 @@
 </div>
 
 
+<% end %>
 <% end %>
 
 </div>
