@@ -3,7 +3,7 @@ class Attachment < ActiveRecord::Base
 	belongs_to :post
 	belongs_to :event
 	
-	has_attached_file :pic, :styles => { :feed => "480x400>", :medium => "500x400#>",:slide => "180x260#", :thumb => "150x100#" },
+	has_attached_file :pic, :styles => { :feed => "480x400>", :medium => "500x400#",:slide => "180x260#", :thumb => "150x100#" },
 	:storage => :s3,
     :bucket => 'aweek1024',
 	:convert_options => { :thumb => "-quality 92" },
