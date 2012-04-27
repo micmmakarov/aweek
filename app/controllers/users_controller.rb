@@ -94,4 +94,9 @@ class UsersController < ApplicationController
       format.js { render "users/approve.js" }
     end
   end
+  
+  def profile
+	@contributors = current_user.followeds
+  end
+
 end

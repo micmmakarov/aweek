@@ -1,7 +1,25 @@
-                    <li><%= link_to('Edit data', current_user)  %></li>
 
 
+					<div class=left-menu>
+                    <li><%= link_to('Edit Your Profile', current_user)  %></li>
+	<div class=title>ALL NEWS FEED</div>
+		<a href="/feed">YOUR NEWS FEED</a>
+		<a href="/">ALL NEWS FEED</a>
+		<a href="/organizations_feed">ORGANISATIONS FEED</a>
+		<a href="/contributors_feed">CONTRINUTORS FEED</a>
+		
+		<div class=content>
+
+		</div>
+	</div>
+	
+	<div class=body>
+					
 <%= stylesheet_link_tag    "organisations", :media => 'screen,projection' %>
+<h1>You are following next users:</h1>
+
+<%= render 'home/contributors' %>
+
 
 <h1>You are following next organisations:</h1>
 
@@ -28,3 +46,5 @@
 
 
 <% end %>
+
+</div>

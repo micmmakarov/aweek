@@ -22,6 +22,7 @@ class User < ActiveRecord::Base
   
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :organisations, :through => :relationships, class_name: "Organisation", :source => :organisation
+  has_many :followeds, :through => :relationships, class_name: "User", :source => :followed, foreign_key: "follower_id"
   
   
   def follow_organisation!(organisation)
@@ -39,6 +40,11 @@ class User < ActiveRecord::Base
 
   def unfollow_user!(user)
     relationships.find_by_followed_id(user.id).destroy
+  end
+  
+  def following_user?(user)
+	@r = Relationship.where("follower_id = :follower AND followed_id = :followed", :follower => id, :followed => user.id).first
+	"Hi" if @r 
   end
   
   def approve_contributor
@@ -69,7 +75,7 @@ class User < ActiveRecord::Base
   end
 
   def following_user_posts 
-	followers.map{|p|
+	followeds.map {|p|
 	p.posts
 	}.flatten
   end

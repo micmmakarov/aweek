@@ -8,11 +8,19 @@ class HomeController < ApplicationController
 
   
   def index
-    @posts = Post.all(:order => "created_at DESC")
-    
+	@posts = Post.all(:order => "created_at DESC")
+	
 	if params[:feed]== 1 then
 		@posts = current_user.following_org_posts
-	end if
+	end
+	
+	if params[:feed]== 2 then
+		@posts = current_user.following_user_posts
+	end
+	
+	if params[:feed]== 3 then
+		@posts = current_user.following_posts
+	end
 	
 	@events = Event.all(:order => "created_at DESC")
     @organisations = Organisation.all 
@@ -26,8 +34,6 @@ class HomeController < ApplicationController
     @organisations = Organisation.all 
   end
   
-  def profile
-  end
   
   def thumbs
 	attachments = Attachment.all

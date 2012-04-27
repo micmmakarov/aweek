@@ -30,8 +30,11 @@ AsianWeek::Application.routes.draw do
   match 'publishpost' => 'posts#publish'
   match 'featurepost' => 'posts#feature'
   get 'calendar' => 'events#calendar'
-  get 'feed' => 'home#index', :feed => 1
+
   get 'organizations_feed' => 'home#index', :feed => 1
+  get 'contributors_feed' => 'home#index', :feed => 2
+  get 'feed' => 'home#index', :feed => 3
+
   get 'all' => 'home#index', :feed => 0
   get 'neighborhoods' => 'home#neighborhoods', :feed => 1
   get 'regenerate_thumbnails' => 'home#thumbs'
@@ -41,6 +44,7 @@ AsianWeek::Application.routes.draw do
   match 'rss/:feed' => 'home#xmls'
 
   match 'approve/:id' => "users#approve"
+  post 'follow_user/:id' => "relationships#follow"
 
   
   

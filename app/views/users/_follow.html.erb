@@ -1,0 +1,15 @@
+<% if user_signed_in? then %>
+	<div class="approve_<%= @user.id %>">
+		<% if current_user.following_user?(@user) then %>
+			<% text = "Unfollow!" %>
+		<% else %>
+			<% text = "Follow!" %>
+		<% end %>
+		<%	url= "/follow_user/" +  @user.id.to_s	%>
+		<%= form_for(@user, :url => url,
+					 html: { method: :post }, class: 'follow',
+					 remote: true) do |f| %>
+		  <%= f.submit text, class: "Follow" %>
+		<% end %>
+	</div>
+<% end %>

@@ -18,4 +18,22 @@ class RelationshipsController < ApplicationController
     end
   end
   
+  def follow
+	
+	@user = User.find(params[:id])
+	if current_user.following_user?(@user) then
+		current_user.unfollow_user!(@user)
+	else
+		current_user.follow_user!(@user)
+	end
+    
+	respond_to do |format|
+      format.html { redirect_to User }
+      format.js { render 'users/follow.js' }
+    end
+  
+  end
+	
+ 
+  
 end
