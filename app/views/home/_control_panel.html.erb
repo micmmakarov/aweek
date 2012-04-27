@@ -7,6 +7,18 @@
                     <li><a href="/events/new">New Event</a></li>
 <!--                    <li><a href="#" class=post-call>Post</a></li> -->
 					<li id=helper></li>
+					<li>
+					<% if current_user.id == 1 then %>
+					
+						<a class=width></a>
+						<script>
+							$(document).ready(function () {
+								$(".width").text($(document).width() + "/" + $(window).width());
+							});
+						</script>
+					
+					<% end %>
+					</li>
                 </ul>
 
                 <ul>
