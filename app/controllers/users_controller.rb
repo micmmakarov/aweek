@@ -103,6 +103,10 @@ class UsersController < ApplicationController
 
 	@contributors = current_user.followeds
 	@organisations = current_user.organisations
+	respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => { :organisations => @organisation, :contributors => @contributors} }
+    end
   end
 
 end
