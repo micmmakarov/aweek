@@ -2,7 +2,9 @@ AsianWeek::Application.routes.draw do
   
 
 
-
+  get "users" => "home#index"
+  get "admins" => "home#index"
+  
   resources :categories do
 	resources :posts
   end
