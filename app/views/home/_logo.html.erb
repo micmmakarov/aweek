@@ -1,6 +1,7 @@
 <div class=logo-space>
 	<% if user_signed_in? then %>
-		<%= link_to ' ', {:controller => 'home', :action => 'index'}, :class => 'home-link' %>
+		<%= link_to ' ', '/', :class => 'home-link' %>
+		<% #link_to ' ', {:controller => 'home', :action => 'index'}, :class => 'home-link' %>
 	<% else %>
 		<%= link_to ' ', '/', :class => 'home-link' %>
 		

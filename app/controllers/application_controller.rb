@@ -7,7 +7,25 @@ class ApplicationController < ActionController::Base
   end
 
   
+  
   before_filter :authenticate_user!
+ 
+ 
+ 
+ 
+  layout :layout_by_resource
+
+  def layout_by_resource
+    if (devise_controller? && resource_name == :admin && action_name == 'new')
+		"admin_login"
+	elsif admin_signed_in?
+		"admins"
+	else
+      "application"
+    end
+	
+	
+  end
  
   
 end

@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <%= stylesheet_link_tag    "main", :media => 'screen,projection' %>
   <%= stylesheet_link_tag    "reset", :media => 'screen,projection' %>
-  <%= stylesheet_link_tag    "buttons", :media => 'screen,projection' %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
@@ -14,9 +13,7 @@
 </head>
 <body>
 
-<div class=dropdown-panel>
-</div>
-
+Hello admin!
 <div class=login-window>
 <%= form_for("user", :url => user_session_path) do |f| %>
   <%= f.text_field :email %>
@@ -31,33 +28,16 @@
 
 <%= render 'home/control_panel' %>
 <%= render 'home/logo' %>
-<%= render 'home/menu' %>
+<%= render 'admins/menu' %>
 <%= render 'home/categories' %>
 
-<% if controller.controller_name=='home' then %>
-	<% if controller.action_name =='index' %>
-		<%= render 'home/slideshow' %>
-	<% end %>
-<% end %>
-<% if controller.controller_name=='organisations' then %>
-	<% if controller.action_name =='show' %>
-		<%= render 'organisations/single' %>
-	<% end %>
-<% end %>
 
-<div class="main wrap">
+<div class="main wrap" style="background:white;">
 	<%= yield %>
 </div>
 
 
 </body>
 
-<script>
-	<% if user_signed_in? then %>
-	$(document).ready(function () {
-	$(".dropdown-panel").load("<%= url_for :controller => "/posts", :action => "new", :ajax1 => true %>");
-	});
-	<% end %>
-</script>
 
 </html>

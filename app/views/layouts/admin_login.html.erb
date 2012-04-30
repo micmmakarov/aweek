@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AsianWeek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <%= stylesheet_link_tag    "main", :media => 'screen,projection' %>
+  <%= stylesheet_link_tag    "reset", :media => 'screen,projection' %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    "buttons", :media => 'screen,projection' %>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300|Maven+Pro:400,700' rel='stylesheet' type='text/css'>
+
+  <style>
+  
+	body {
+		background: url('/assets/city.jpg') 50% top no-repeat;
+		background-attachment: fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.login {
+	width:230px;
+	margin:auto;
+	margin-top:200px;
+	padding:30px;
+	background: rgba(255,255,255,0.7);
+	overflow:hidden;
+	font-family: 'Open Sans', sans-serif;
+
+	}
+  
+  </style>
+  
+  
+</head>
+<body>
+
+
+
+
+	<div class=login>
+	<img src="/assets/logo.png" />
+	<%= yield %>
+	</div>
+
+
+
+</body>
+
+
+</html>

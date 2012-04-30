@@ -1,5 +1,8 @@
 AsianWeek::Application.routes.draw do
   
+
+
+
   resources :categories do
 	resources :posts
   end
@@ -16,14 +19,16 @@ AsianWeek::Application.routes.draw do
 	match :publish
   end
   
-    devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" } do
+  devise_for :admins, :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" } do
 	 get "/users/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
+	 get "/admins/sign_out" => "devise/sessions#destroy", :as => :destroy_admin_session
   end
   
   resources :users do
 	match :approve
   end
 
+  #resources :admins
 	
   get "home/index"
   get 'profile' => 'users#profile'
@@ -104,7 +109,7 @@ AsianWeek::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'home#index'
+   root :to => 'home#index', :feed => 0
 
   # See how all your routes lay out with "rake routes"
 
