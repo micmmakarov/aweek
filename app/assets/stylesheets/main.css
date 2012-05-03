@@ -11,6 +11,13 @@ font-family: 'Maven Pro', sans-serif;
 
 
 /* GENERAL STYLES */
+.stat {
+color: #399;
+font-family: 'Open Sans', sans-serif;
+font-size: 11px;
+margin-bottom: 5px;
+
+}
 
 body h2 {
 font-size: 20px;
@@ -93,6 +100,14 @@ height:100px;
 border-radius:10px;
 margin-bottom:15px;
 }
+.profile-thumb-pic {
+    width:30px;
+    height:30px;
+    border-radius:4px;
+    margin:2px;
+    display:inline-block;
+    overflow:hidden;
+}
 
 
 /* POST */
@@ -129,7 +144,8 @@ font-size: 20px;
 .login-window {
 position:absolute;
 right:0;
-width:400px;
+padding:30px;
+width:250px;
 height:200px;
 font-family: 'Open Sans', sans-serif;
 font-size:15px;
@@ -143,6 +159,9 @@ box-shadow:2px 2px 3px lightgray;
 
 padding-top:30px;
 overflow:hidden;
+}
+.login-window li {
+margin-bottom:5px;
 }
 
 
@@ -474,7 +493,12 @@ background: rgba(255,255,255,0.5);
 border-radius:50px;
 }
 
+.body-right {
+    float:left;
+}
+
 .slideshow {
+background:white;
 height:300px;
 width:100%;
 box-shadow: 5px 5px 10px lightgray;
@@ -494,7 +518,8 @@ padding-bottom:10px;
 }
 .left160 {
 float:left;
-width:200px;
+width:180px;
+padding-left:20px;
 overflow:hidden;
 }
 

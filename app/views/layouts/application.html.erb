@@ -19,13 +19,16 @@
 
 <div class=login-window>
 <%= form_for("user", :url => user_session_path) do |f| %>
-  <%= f.text_field :email %>
-  <%= f.password_field :password %>
-  <%= f.check_box :remember_me %>
-  <%= f.label :remember_me %>
-  <%= f.submit 'Sign in' %>
-  <%= link_to "Forgot your password?", new_password_path('user') %>
-  <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+<ul>
+<li><%= f.text_field :email %></li>
+<li><%= f.password_field :password %></li>
+<li><%= f.check_box :remember_me %>
+<%= f.label :remember_me %></li>
+<li><%= f.submit 'Sign in', :class => "btn btn-large btn-primary" %></li>
+<li>&nbsp;</li>
+<li><%= link_to "Forgot your password?", new_password_path('user') %></li>
+<li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
+</ul>
 <% end %>
 </div>
 

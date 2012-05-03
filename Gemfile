@@ -16,6 +16,11 @@ gem 'aws-s3'
 gem 'aws-sdk'
 gem 'devise'
 gem 'omniauth-facebook'
+
+
+gem 'omniauth'
+gem 'oauth2'
+
 gem 'rails_admin'
 gem 'hpricot'
 gem 'simple-rss'

@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :events
   has_one :organisation
+  has_and_belongs_to_many :roles
   
   
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
@@ -27,7 +28,10 @@ class User < ActiveRecord::Base
   has_many :followeds, :through => :relationships, class_name: "User", :source => :followed, foreign_key: "follower_id"
 
   has_many :followers, :through => :relationships, class_name: "User", :source => :follower, :foreign_key => :followed
-  
+
+  def role?(role)
+    return !!self.roles.find_by_name(role.to_s.camelize)
+  end
   
   def follow_organisation!(organisation)
     relationships.create!(organisation_id: organisation.id)
@@ -102,5 +106,9 @@ class User < ActiveRecord::Base
 	list
 	
   end
-  
+
+  def views
+    posts.sum(:views)
+  end
+
 end

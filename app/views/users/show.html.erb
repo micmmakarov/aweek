@@ -1,6 +1,15 @@
+<div class=slideshow2>
+
+  <div class=left160>
+    <div class=stat>Total posts views: <%= @user.views %></div>
+    <div class=stat>Posts: <%= @user.posts.length %></div>
+    <div class=stat>Followers: <%= @user.followers.length %></div>
+    </div>
+
+  <div class=body>
 <p id="notice"><%= notice %></p>
 
- <%= image_tag @user.pic(:medium) %>
+
 <p>
   <b>Name:</b>
   <%= @user.name %>
@@ -10,7 +19,27 @@
   <b>Role:</b>
   <%= @user.role %>
 </p>
+  </div>
+  <div class=body-right>
+    <%= image_tag @user.pic(:medium), :class => 'big-img' %>
+  </div>
+</div>
 
-
+<% if admin_signed_in? %>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+<% end %>
+
+<div class=left-menu>
+  <div class=title>YOUR NEWS FEED</div>
+  <div class=content>
+  </div>
+</div>
+
+<div class=body>
+  <%= render 'home/posts' %>
+</div>
+<%= render 'home/events' %>
+<%= render 'users/followers' %>
+
+

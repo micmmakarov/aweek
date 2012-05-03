@@ -6,7 +6,8 @@
 class HomeController < ApplicationController
   skip_before_filter :authenticate_user!, :except => :profile
 
-  
+
+
   def index
 	@posts = Post.all(:order => "created_at DESC")
 	
@@ -49,7 +50,6 @@ class HomeController < ApplicationController
   
   def xmls
 
-	
 	#@rss = SimpleRSS.parse open('http://techcrunch.com/feed/')	
 #http://www.shareable.net/blog/feed
 #http://techcrunch.com/feed/
@@ -72,7 +72,10 @@ class HomeController < ApplicationController
 	@contributors = User.find_all_by_role(7)
 	
   end
-  
+
+  def profile
+
+  end
   
   
   end

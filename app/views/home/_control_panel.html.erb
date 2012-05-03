@@ -21,13 +21,16 @@
 					</li>
                 </ul>
 
-                <ul>
-                    <li><a href="#"><%= current_user.name %></a></li>
+
+
+      <ul>
+                    <li style="padding-top:0px;margin-right:0px;"><div class=profile-thumb-pic style="float:right; background:url('<%= current_user.pic.url(:thumb) %>');">&nbsp;</div></li>
+                    <li style="width:170px !important;"> <a href="#"><%= "Contributor" if contributor? %> <%= current_user.name %></a></li>
                     <li><a href="/profile">Profile</a></li>
 					<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
                 </ul>
 
-	</div>
+    </div>
 </div>
 
 <% else %>

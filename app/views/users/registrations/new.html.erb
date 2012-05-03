@@ -1,8 +1,9 @@
+<div style="background:white;">
 <h2>Sign up</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-      Profile Picture <%= f.file_field :pic %>
+      Profile Picture <br><%= f.file_field :pic %>
 
   <div>
   <% if params[:contributor] == 'yes' %>
@@ -27,7 +28,8 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Sign up" %></div>
+  <div><%= f.submit "Sign up", :class => "btn btn-large btn-primary" %></div>
 <% end %>
 
 <%= render "links" %>
+</div>

@@ -1,12 +1,15 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :all_categories
+  helper_method :contributor?
 
   def all_categories
 	Category.all
   end
 
-  
+  def contributor?
+    "1" if (current_user && current_user.role==7)
+  end
   
   before_filter :authenticate_user!
  

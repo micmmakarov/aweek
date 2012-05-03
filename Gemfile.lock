@@ -126,6 +126,10 @@ GEM
     pg (0.11.0)
     pg (0.11.0-x86-mingw32)
     polyglot (0.3.3)
+    pry (0.9.8.4)
+      coderay (~> 1.0.5)
+      method_source (~> 0.7.1)
+      slop (>= 2.4.4, < 3)
     pry (0.9.8.4-x86-mingw32)
       coderay (~> 1.0.5)
       method_source (~> 0.7.1)
@@ -227,6 +231,8 @@ DEPENDENCIES
   jquery-rails
   libv8 (= 3.3.10.4)
   nokogiri
+  oauth2
+  omniauth
   omniauth-facebook
   paperclip (= 3.0.0)
   pg

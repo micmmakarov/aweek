@@ -2,8 +2,10 @@ AsianWeek::Application.routes.draw do
   
 
 
+
   get "users" => "home#index"
   get "admins" => "home#index"
+  get "userz" => "users#index"
   
   resources :categories do
 	resources :posts
@@ -23,9 +25,10 @@ AsianWeek::Application.routes.draw do
   
   devise_for :admins, :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" } do
 	 get "/users/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
-	 get "/admins/sign_out" => "devise/sessions#destroy", :as => :destroy_admin_session
+  get "/admins/sign_out" => "devise/sessions#destroy", :as => :destroy_admin_session
   end
-  
+#  devise_for :admins
+
   resources :users do
 	match :approve
   end

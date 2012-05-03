@@ -8,7 +8,12 @@
 	</div> -->
 	
 	<style>
+      .follow-buttons {
+          position:absolute;
+          bottom:15px;
+      }
 		 .unit {
+        position:relative;
 		border-radius:5px;
 		box-shadow: 3px 3px 10px rgba(0,0,0,0.02);
 		box-shadow: inset 3px 3px 10px rgba(0,0,0,0.02);
@@ -31,6 +36,9 @@
 		width:100%;
 		margin-top:40px;
 		}
+            .stat {
+                font-size:10px;
+            }
 	</style>
 	
 	<!-- <div class=organisation-block> -->
@@ -55,17 +63,21 @@
 <div class=unit>
 
     <div class="unit-pic org-pic" style="background: url('<%= organisation.pic.url(:thumb) %>');width:60px;height:60px;"></div>
-	<div class=name><a href="<%= url_for organisation %>"><%= organisation.name %> (<%= organisation.followers.length %>)<a/></div><div style="height:30px;"></div>
+	<div class=name><a href="<%= url_for organisation %>"><%= organisation.name %></a></div><div style="height:30px;"></div>
 	<div class=city><%= organisation.city %></div>
-	
+  <div class=stat>Total posts views: <%= organisation.views %></div>
+  <div class=stat>Posts: <%= organisation.posts.length %></div>
+  <div class=stat>Followers: <%= organisation.followers.length %></div>
+  <div class=stat>Sexy females within organization: <%= organisation.followers.length %></div>
 
-	<div class=clear></div>
+
+  <div class=clear></div>
     <div class=unit-description><%= organisation.description.slice(0..100) %>...</div>
     <div></div>
 	
 	<% if user_signed_in? then %>
 	
-	<div class="follow_<%= organisation.id %>">
+	<div class="follow-buttons follow_<%= organisation.id %>">
 		
 		<% if current_user.flw(organisation) then %>
 			

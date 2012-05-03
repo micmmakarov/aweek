@@ -19,6 +19,10 @@ class Organisation < ActiveRecord::Base
 
 	def following(user)
 		
-	end
-	
+  end
+
+  def views
+    posts.sum(:views)
+  end
+
 end
