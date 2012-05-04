@@ -19,7 +19,8 @@ Devise.setup do |config|
   require 'devise/orm/active_record'
   
   require 'omniauth-facebook'
-  config.omniauth :facebook, "392757904070082", "10f64f167b9d001f70b7929f5ea2ec6f"
+  config.omniauth :facebook, "392757904070082", "10f64f167b9d001f70b7929f5ea2ec6f",
+                  {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
   #,
    #   {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}} 
   # ==> Configuration for any authentication mechanism

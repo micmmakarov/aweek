@@ -1,10 +1,10 @@
 class OrganisationsController < ApplicationController
   before_filter :authenticate_user!, :except => [:show, :index]
-
+  before_filter :authenticate_admin!, :only => :publish
   # GET /organisations
   # GET /organisations.json
   def index
-    @organisations = Organisation.all
+    @organisations = Organisation.where(:published => true).all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -87,4 +87,18 @@ class OrganisationsController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  def publish
+    @organisation = Organisation.find(params[:id])
+    if @organisation.published then
+      @organisation.unpublish!
+    else
+      @organisation.publish!
+    end
+    respond_to do |format|
+      format.html { head :ok }
+      format.js { render "publish.js" }
+    end
+  end
+
 end

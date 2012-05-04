@@ -49,7 +49,7 @@
 
 <div class=raw>
 <% @organisations.each do |organisation| %>
-    <div class="unit-pic org-pic" style="background: url('<%= organisation.pic.url(:thumb) %>');width:60px;height:60px;"></div>
+    <div class="unit-pic org-pic" style="background: url('<%= organisation.pic.url(:thumb) %>');width:60px;height:60px;margin-right:15px;"></div>
 
 <% end %>
 </div><br><br><br><br>
@@ -61,14 +61,13 @@
 
 
 <div class=unit>
-
+  <div class=name><a href="<%= url_for organisation %>"><%= organisation.name %></a></div><div class=clear></div>
     <div class="unit-pic org-pic" style="background: url('<%= organisation.pic.url(:thumb) %>');width:60px;height:60px;"></div>
-	<div class=name><a href="<%= url_for organisation %>"><%= organisation.name %></a></div><div style="height:30px;"></div>
+
 	<div class=city><%= organisation.city %></div>
   <div class=stat>Total posts views: <%= organisation.views %></div>
   <div class=stat>Posts: <%= organisation.posts.length %></div>
   <div class=stat>Followers: <%= organisation.followers.length %></div>
-  <div class=stat>Sexy females within organization: <%= organisation.followers.length %></div>
 
 
   <div class=clear></div>

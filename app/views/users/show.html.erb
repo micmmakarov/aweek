@@ -10,16 +10,19 @@
 <p id="notice"><%= notice %></p>
 
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
-
-<p>
-  <b>Role:</b>
-  <%= @user.role %>
-</p>
+<h1><%= @user.name %></h1>
+  <div class=stat>Role: <%= @user.role %>
+    <br>Joined: <%= @user.created_at %>
+    <br>Followers: <%= @user.followers.length %>
+    <br>Posts: <%= @user.posts.length %>
+    <br>Total views of posts: <% @user.views %>
   </div>
+<h2>City: <%= @user.city %></h2>
+
+
+
+  </div>
+
   <div class=body-right>
     <%= image_tag @user.pic(:medium), :class => 'big-img' %>
   </div>

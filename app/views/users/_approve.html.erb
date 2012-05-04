@@ -1,15 +1,16 @@
 <div class="approve_<%= @user.id %>">
-<% if @user.role==7 then %>
-	<% text = "Dissaprove as contributor!" %>
-    <% btn_class = "btn btn-danger btn-mini" %>
-<% else %>
-	<% text = "Approve as contributor!" %>
-      <% btn_class = "btn btn-success btn-mini" %>
-  <% end %>
+
 <%	url= "/approve/" +  @user.id.to_s	%>
 <%= form_for(@user, :url => url,
              html: { method: :post }, class: 'approve',
              remote: true) do |f| %>
-  <%= f.submit text, class: "Contributor " + btn_class %>
+      <% if @user.role==7 then %>
+          <%= f.submit 'Disapprove', class: "Contributor btn btn-warning" %>
+      <% else %>
+          <%= f.submit 'Approve', class: "Contributor btn btn-success" %>
+      <% end %>
+
+
+
 <% end %>
 </div>

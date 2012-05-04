@@ -1,4 +1,7 @@
 class AdminsController < ApplicationController
+
+  before_filter :authenticate_admin!
+
   # GET /admins
   # GET /admins.json
   def index
@@ -80,4 +83,12 @@ class AdminsController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  def organisations
+    @organisations = Organisation.all(order: 'name')
+        #where("published = false")
+  end
+
+
+
 end

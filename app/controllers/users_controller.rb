@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
-  before_filter :authenticate_admin!, :except => [:show]
-  
+  before_filter :authenticate_admin!, :except => [:show, :profile, :edit, :update]
+  before_filter :authenticate_user!, :except => [:show]
+
   def index
     @users = User.all
 
@@ -38,13 +39,20 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user = User.find(params[:id])
+    if user_signed_in? then
+      @user = current_user
+    end
+    if admin_signed_in? then
+      @user = User.find(params[:id])
+    end
   end
 
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(params[:user])
+
+      @user = User.find(params[:id])
+
 
     respond_to do |format|
       if @user.save
@@ -60,7 +68,12 @@ class UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.json
   def update
-    @user = User.find(params[:id])
+    if user_signed_in? then
+      @user = current_user
+    end
+    if admin_signed_in? then
+      @user = User.find(params[:id])
+    end
 
     respond_to do |format|
       if @user.update_attributes(params[:user])

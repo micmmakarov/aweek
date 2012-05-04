@@ -5,17 +5,22 @@ AsianWeek::Application.routes.draw do
 
   get "users" => "home#index"
   get "admins" => "home#index"
-  get "userz" => "users#index"
-  
+  get "posts" => "home#index"
+  get "manage/posts" => "posts#index"
+  get "manage/users" => "users#index"
+  get "manage/organisations" => "admins#organisations"
+
   resources :categories do
-	resources :posts
+	  resources :posts
   end
 
   resources :relationships, only: [:create, :destroy]
   
   resources :attachments
 
-  resources :organisations
+  resources :organisations do
+    match :publish
+  end
 
   resources :events
 
@@ -23,7 +28,7 @@ AsianWeek::Application.routes.draw do
 	match :publish
   end
   
-  devise_for :admins, :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" } do
+  devise_for :admins, :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" } do
 	 get "/users/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
   get "/admins/sign_out" => "devise/sessions#destroy", :as => :destroy_admin_session
   end
@@ -39,6 +44,7 @@ AsianWeek::Application.routes.draw do
   get 'profile' => 'users#profile'
   match 'publishpost' => 'posts#publish'
   match 'featurepost' => 'posts#feature'
+  match 'publishorganisation' => 'organisations#publish'
   get 'calendar' => 'events#calendar'
 
   get 'organizations_feed' => 'home#index', :feed => 1

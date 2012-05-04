@@ -1,29 +1,59 @@
-<h1>Listing users</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Role</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.name %></td>
-    <td><%= user.role %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
-	<td>
-	<%  @user = user %>
-	<%= render 'users/approve' %>
-</td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
 <%= link_to 'New User', new_user_path %>
+
+
+
+<style>
+    .organisation {
+        margin:5px;
+        width:370px;
+        padding:5px;
+        background:#EEEEEE;
+        float:left;
+    }
+</style>
+<h1>The list of User:</h1>
+<div class="btn-group" data-toggle="buttons-radio" >
+  <button class="btn btn-primary show_all">All</button>
+  <button class="btn btn-primary unpub">Readers</button>
+  <button class="btn btn-primary active pub">Contributors</button>
+</div>
+<br>
+
+<% @users.each do |o| %>
+    <div class="organisation role_<%= o.role %>" data-name="<%= o.name %>">
+      <div style="width:70px;overflow:hidden;float:left;">
+        <div class="unit-pic org-pic alignleft" style="background: url('<%= o.pic.url(:small) %>');width:58px;height:60px;"></div>
+      </div>
+      <div style="width:200px;overflow:hidden;float:left;">
+        <h3 style="margin-bottom:5px;"><%= link_to o.name, o %></h3>
+
+        <div class=stat><i class="icon-map-marker"></i> <%= o.city %></div>
+        <div class=stat><i class="icon-time"></i> <%= o.created_at %></div>
+      </div>
+      <div style="float:left;width:100px;">
+        <%  @user = o %>
+        <%= render 'users/approve' %>
+        <br>
+
+        <%= link_to 'Edit', edit_user_path(o), class: "btn btn-info btn-mini" %>
+        <%= link_to 'Destroy', o, class: "btn btn-danger btn-mini",confirm: 'Are you sure?', method: :delete %>
+      </div>
+      <div class=clear></div>
+    </div>
+<% end %>
+
+<script>
+    $(document).ready(function() {
+        $(".unpub").click(function() {
+            $(".organisation").show(1500);
+            $(".role_7").hide(1500);
+        });
+        $(".pub").click(function() {
+            $(".organisation").hide(1500);
+            $(".role_7").show(1500);
+        });
+        $(".show_all").click(function() {
+            $(".organisation").show(1500);
+        });
+    });
+</script>

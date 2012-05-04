@@ -1,0 +1,11 @@
+<div class="publish_<%= @organisation.id %>">
+<%= form_for(@organisation, :url => { :action => "publish", :id => @organisation.id, :controller => :organisations },
+             html: { method: :post }, class: 'follow',
+             remote: true) do |f| %>
+      <% if @organisation.published then %>
+          <%= f.submit 'Unpublish', class: "btn-unfollow btn btn-warning" %>
+<% else %>
+          <%= f.submit 'Publish', class: "btn-unfollow btn btn-success" %>
+<% end %>
+<% end %>
+</div>

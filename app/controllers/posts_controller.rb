@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   
-  before_filter :authenticate_contributor!, :except => [:show, :new]
+  before_filter :authenticate_user!, :except => [:show, :new]
+  before_filter :authenticate_admin!, :only => :index
   
   # GET /posts
   # GET /posts.json

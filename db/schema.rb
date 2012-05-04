@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120430202109) do
+ActiveRecord::Schema.define(:version => 20120503203750) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(:version => 20120430202109) do
     t.string   "pic_content_type"
     t.integer  "pic_file_size"
     t.datetime "pic_updated_at"
+    t.boolean  "published"
   end
 
   create_table "posts", :force => true do |t|
